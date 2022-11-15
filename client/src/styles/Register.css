@@ -4,6 +4,7 @@
   margin-inline: auto;
 }
 
+
 @media screen and (max-width: 1030px) {
   .card-container {
     max-width: 85%;

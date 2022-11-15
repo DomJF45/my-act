@@ -2,20 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { Landing } from './components/landing/Landing';
-import About from './components/about/About';
-import Services from './components/services/Services';
 import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route
-} from 'react-router-dom'
-import { ToastContainer } from 'react-bootstrap';
 import 'react-toastify/dist/ReactToastify.css';
-import Login from './components/auth/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Register from './components/auth/Register';
 
 
 
