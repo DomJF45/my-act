@@ -5,12 +5,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container"
 
-export const Navigation = () => {
+const Navigation = () => {
 
   const navigate = useNavigate();
 
   return (
-    <>
+    <div className='nav-container'>
       <Navbar bg="light" collapseOnSelect expand="lg" variant="light">
         <Container>
           <Navbar.Brand href="">MyAct</Navbar.Brand>
@@ -25,6 +25,8 @@ export const Navigation = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+    </div>
   )
 }
+
+export default Navigation;

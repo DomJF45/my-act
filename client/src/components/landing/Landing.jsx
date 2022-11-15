@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigation } from '../Navbar/Navigation';
+import Navigation from '../Navbar/Navigation';
 import { useNavigate } from 'react-router';
 import values from '../../img/values.svg';
 import '../../styles/Landing.css';
@@ -78,7 +78,7 @@ export const Landing = () => {
           </div>
           <div className="header-text">
             
-            <p>Become more present in your everyday surroundings</p>
+            <p>Become more present in your everyday surroundings!</p>
             
           </div>
         </div>

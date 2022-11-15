@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Navigation from '../Navbar/Navigation';
+import '../../styles/Services.css';
 
 const Services = () => {
   return (
-    <div>Services Works!</div>
+    <>
+      <Navigation />
+      <div className='services-container'>
+
+      </div>
+    </>
   )
 }
 

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Navigation } from '../Navbar/Navigation';
+import Navigation from '../Navbar/Navigation';
 import { Link } from 'react-router-dom';
 import ErrorToast from '../util/toasts/ErrorToast';
 import Form from 'react-bootstrap/Form';

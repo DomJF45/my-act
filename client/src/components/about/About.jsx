@@ -1,8 +1,14 @@
 import React from 'react'
+import Navigation from '../Navbar/Navigation';
 
 const About = () => {
   return (
-    <div>About Works!</div>
+    <>
+      <Navigation />
+      <div className='about-container'>
+
+      </div>
+    </>
   )
 }
 
