@@ -10,6 +10,7 @@ import selfImg from '../../img/self_img.png'
 import aware from '../../img/aware.svg';
 import presentHumans from '../../img/presentHumans.svg';
 import Footer from '../footer/Footer';
+import FullNavbar from '../navbar/FullNavbar';
 
 export const Landing = () => {
 
@@ -17,7 +18,6 @@ export const Landing = () => {
 
   return (
     <>
-      <Navigation />
       <div className="main-wrapper">
         <div className='main-grid'>
           <div className='header'>
@@ -37,8 +37,6 @@ export const Landing = () => {
             </div>
           </div>
         </div>
-
-        
 
         <div className='main-grid-alt'>
           <div className='header-text'>
@@ -64,10 +62,6 @@ export const Landing = () => {
           </div>
           
         </div>
-
-        
-          
-        
 
         <div className='main-grid'>
           <div className='header'>

@@ -1,7 +1,9 @@
 import './index.css';
+import { useState } from 'react';
 import { 
   createBrowserRouter, 
   RouterProvider,
+  useNavigate,
   Route 
 } from 'react-router-dom'
 import { Landing } from './components/landing/Landing';
@@ -21,8 +23,13 @@ import Self from './components/processes/self/Self';
 import Acceptance from './components/processes/acceptance/Acceptance';
 import UserInfo from './components/userInfo/UserInfo';
 import Defusion from './components/processes/defusion/Defusion';
+import FullNavbar from './components/navbar/FullNavbar';
+
 
 function App() {
+
+  const [user, setUser] = useState(false)
+
 
   const router = createBrowserRouter([
     {
@@ -39,7 +46,7 @@ function App() {
     },
     {
       path: "/login",
-      element: <Login />
+      element: <Login setUser={setUser} />
     },
     {
       path: "/register",
@@ -47,7 +54,7 @@ function App() {
     },
     {
       path: "/dashboard",
-      element: <Dashboard />
+      element: <Dashboard user={user} />
     },
     {
       path: "/dashboard/processes",
@@ -90,6 +97,7 @@ function App() {
 
   return (
     <>
+      <FullNavbar user={user} setUser={setUser} />
       <RouterProvider router={router} />
       <ToastContainer />
     </>

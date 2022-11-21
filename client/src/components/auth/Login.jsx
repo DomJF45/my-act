@@ -6,10 +6,11 @@ import Card from 'react-bootstrap/Card';
 import '../../styles/Register.css'
 import { Button } from 'react-bootstrap';
 
-const Login = () => {
+const Login = ({ setUser }) => {
 
   const emailRef = useRef();
   const passRef = useRef();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,11 +22,13 @@ const Login = () => {
 
     console.log(userData);
 
+    setUser(true);
+
+    navigate('/dashboard')
   }
 
   return (
     <>
-      <Navigation />
       <div className='card-container'>
         <Card style={{marginTop: "5rem"}}>
           <Card.Header>

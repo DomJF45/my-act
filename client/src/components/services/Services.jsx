@@ -5,7 +5,6 @@ import '../../styles/Services.css';
 const Services = () => {
   return (
     <>
-      <Navigation />
       <div className='services-container'>
 
       </div>

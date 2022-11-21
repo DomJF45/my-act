@@ -7,14 +7,14 @@ import '../../styles/Dashboard.css'
 import EventCard from './cards/EventCard'
 import ProcessesCard from './cards/ProcessesCard'
 import SettingsCard from './cards/SettingsCard'
+import { useEffect } from 'react'
 
-const Dashboard = () => {
+const Dashboard = ({user}) => {
 
   const navigate = useNavigate();
 
   return (
     <>
-      <FullNavbar />
       <Container>
         <h1>Dashboard</h1>
       </Container>

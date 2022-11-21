@@ -4,6 +4,18 @@
   animation: FadeInAndUp .5s forwards;
 }
 
+.back {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  width: 140px;
+}
+.back:hover {
+  cursor: pointer;
+}
+
+
 @keyframes FadeInAndUp {
   from {
     opacity: 0;

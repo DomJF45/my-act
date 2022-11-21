@@ -38,7 +38,6 @@ const Register = () => {
 
   return (
     <>
-      <Navigation />
       <div className='card-container'>
         <Card style={{marginTop: "5rem"}}>
           <Card.Header>
