@@ -1,5 +1,5 @@
 import React from 'react'
-import Navigation from '../Navbar/Navigation';
+import Navigation from '../navbar/Navigation';
 import { useNavigate } from 'react-router';
 import values from '../../img/values.svg';
 import '../../styles/Landing.css';

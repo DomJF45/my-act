@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Navigation from '../Navbar/Navigation';
+import Navigation from '../navbar/Navigation';
 import { useNavigate, Link } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';

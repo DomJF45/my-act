@@ -1,0 +1,14 @@
+.link-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 1030px) {
+  .link-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

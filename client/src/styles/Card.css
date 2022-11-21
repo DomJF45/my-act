@@ -1,0 +1,33 @@
+.card-box {
+  padding: 2.4rem 1.6rem, 3rem;
+  border-radius: 22px;
+  box-shadow: 0 20px 40px -16px rgb(0 0 0 / 40%);
+  background: linear-gradient(-5deg,#479aa5,#5473cb 60%,#3e509d);
+  height: 15rem;
+  position: relative;
+  transition: .2s ease;
+  text-decoration: none;
+  color: #fff;
+}
+.card-box:hover {
+  cursor: pointer;
+  transform: translateY(-2px) scale(1.01);
+  transition: .2s ease;
+  color: #fff;
+}
+.card-box p {
+  margin: 1rem 2rem;
+  font-size: xx-large;
+}
+
+.card-img {
+  max-width: 35%;
+  width: 150px;
+  float: right;
+  display: block;
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 1030px) {
+  
+}

@@ -123,4 +123,10 @@
   .main-wrapper {
     max-width: 93%;
   }
+  .logo-container {
+    overflow: hidden;
+  }
+  .logo-container > svg {
+    width: 400px;
+  }
 }
