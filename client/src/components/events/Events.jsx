@@ -1,11 +1,14 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 import FullNavbar from '../navbar/FullNavbar'
 
 const Events = () => {
   return (
     <>
       <FullNavbar />
-      <h1>Events Works!</h1>
+      <Container>
+        <h1>Events Works!</h1>
+      </Container>
     </>
   )
 }

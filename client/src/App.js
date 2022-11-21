@@ -18,9 +18,9 @@ import Present from './components/processes/present/Present';
 import Values from './components/processes/values/Values';
 import Commitment from './components/processes/commitment/Commitment';
 import Self from './components/processes/self/Self';
-import Diffusion from './components/processes/diffusion/Diffusion';
 import Acceptance from './components/processes/acceptance/Acceptance';
 import UserInfo from './components/userInfo/UserInfo';
+import Defusion from './components/processes/defusion/Defusion';
 
 function App() {
 
@@ -70,8 +70,8 @@ function App() {
       element: <Self />
     },
     {
-      path: "/dashboard/processes/diffusion",
-      element: <Diffusion />
+      path: "/dashboard/processes/defusion",
+      element: <Defusion />
     },
     {
       path: "/dashboard/processes/acceptance",

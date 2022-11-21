@@ -17,15 +17,14 @@ const Dashboard = () => {
       <FullNavbar />
       <Container>
         <h1>Dashboard</h1>
-        {/* <div className="d-flex justify-content-center">
-          <Logo />
-        </div> */}
       </Container>
       <Container>
-        <div className="link-container">
-          <ProcessesCard />
-          <EventCard />
-          <SettingsCard />
+        <div className='animate-fade-up'>
+          <div className="link-container">
+            <ProcessesCard />
+            <EventCard />
+            <SettingsCard />
+          </div>
         </div>
       </Container>
     </>
