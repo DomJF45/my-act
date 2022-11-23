@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "user_ID": "1234",
+      "first_name": "John",
+      "last_name": "Doe",
+      "date_of_birth": "01-01-1990",
+      "email": "john@mail.com",
+      "password": "password123",
+      "favorites": [
+        {
+          "exercise_id": 1
+        },
+        {
+          "exercise_id": 4
+        }
+      ],
+      "registered_events": [
+        {
+          "event_id": "123"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "event_id": "123",
+      "title": "Test Event",
+      "event_address": "1234 Rd 12345",
+      "event_date": "10-20-2022",
+      "process_id": "1"
+    }
+  ],
+  "process": [
+    {
+      "process_id": "1",
+      "title": "Present"
+    },
+    {
+      "process_id": "2",
+      "title": "Values"
+    },
+    {
+      "process_id": "3",
+      "title": "Commitment"
+    },
+    {
+      "process_id": "4",
+      "title": "Self"
+    },
+    {
+      "process_id": "5",
+      "title": "Defusion"
+    },
+    {
+      "process_id": "6",
+      "title": "Acceptance"
+    }
+  ]
+}
