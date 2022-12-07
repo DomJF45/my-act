@@ -22,14 +22,14 @@
   display: block;
   justify-content: center;
   align-items: center;
-  background-color: #f4ebff;
+  background-color: #7a18fa;
   border-radius: 10px;
 }
 
 #value-column {
-  
+
 }
 
-/* #value-column::-webkit-scrollbar-track {
+#value-column::-webkit-scrollbar-track {
   display: none;
-} */
+}

@@ -101,9 +101,10 @@ const CardSort = () => {
                       style={{
                         background: snapshot.isDraggingOver ? 'lightblue' : 'lightgrey',
                         padding: 4,
-                        width: 250,
+                        width: 300,
                         height: 500,
-                        overflowY: 'overlay'
+                        overflowY: 'overlay',
+                        borderRadius: '15px'
                       }}
                       id='value-column'
                     >
@@ -123,10 +124,11 @@ const CardSort = () => {
                                   style={{
                                     userSelect: 'none',
                                     padding: 16,
-                                    margin: '0 0 8px 0',
+                                    margin: '8px 8px 8px 8px',
                                     minHeight: '50px',
-                                    backgroundColor: snapshot.isDragging ? '#263B4A' : '#456C86',
+                                    backgroundColor: snapshot.isDragging ? '#7a18fa' : '#9747FF',
                                     color: '#fff',
+                                    borderRadius: '10px',
                                     ...provided.draggableProps.style
                                   }}
                                   
