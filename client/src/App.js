@@ -24,6 +24,7 @@ import Acceptance from './components/processes/acceptance/Acceptance';
 import UserInfo from './components/userInfo/UserInfo';
 import Defusion from './components/processes/defusion/Defusion';
 import FullNavbar from './components/navbar/FullNavbar';
+import Breathing from './components/processes/present/Breathing';
 
 
 function App() {
@@ -62,7 +63,11 @@ function App() {
     },
     {
       path: "/dashboard/processes/present",
-      element: <Present />
+      element: <Present />,
+    },
+    {
+      path: "/dashboard/processes/present/breathing",
+      element: <Breathing />
     },
     {
       path: "/dashboard/processes/values",

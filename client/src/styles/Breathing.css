@@ -1,0 +1,85 @@
+.exercise-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  position: relative;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  position: relative;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  background: #9747FF;
+  border-radius: 50%;
+  position: absolute;
+}
+.circle2 {
+  height: 140px;
+  width: 140px;
+  background: #b989f9;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+}
+.circle3 {
+  height: 130px;
+  width: 130px;
+  background: #d5bbf7;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+}
+.circle4 {
+  height: 120px;
+  width: 120px;
+  background: #e9ddf9;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+}
+.circle5 {
+  height: 110px;
+  width: 110px;
+  background: #f4ebff;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+}
+.breathe-container {
+  display: flex;
+  justify-content: center;
+}
+.breathe {
+  z-index: 3;
+  position: absolute;
+  top:60px;
+  font-size: x-large;
+  color: #b989f9;
+}
+.done {
+  font-size: x-large;
+  color: #b989f9;
+}
+
+.btn-container {
+  margin-top: 4rem;
+  padding-top: 0;
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+}
+.breathing-footer {
+  margin-top: 17rem;
+}
+.bottom {
+  margin-top: 17rem;
+}
