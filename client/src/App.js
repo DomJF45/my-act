@@ -102,7 +102,7 @@ function App() {
 
   return (
     <>
-      <FullNavbar user={user} setUser={setUser} />
+      <FullNavbar user={true} setUser={setUser} />
       <RouterProvider router={router} />
       <ToastContainer />
     </>

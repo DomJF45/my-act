@@ -48,14 +48,14 @@ const BreathingAnimation = (props) => {
                 
                 <motion.p>Finished</motion.p>
               </div>
-              <div className='breathing-footer'>
+              {/* <div className='breathing-footer'>
                 <div className='btn-container'>
                   <Button variant='danger' onClick={() => props.setShowBreath(false)}>End Exercise!</Button>
                 </div>
                 <div className='timer-container'>
                   <p>Time Left: {props.counter}</p>
                 </div>
-              </div>
+              </div> */}
             </>
       </div>
   )
