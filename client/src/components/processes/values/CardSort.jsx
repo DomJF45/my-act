@@ -90,7 +90,7 @@ const CardSort = () => {
         {Object.entries(columns).map(([columnId, column], index) => {
           return(
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-              <h2>{column.name}</h2>
+              <h2 style={{color: '#b989f9'}}>{column.name}</h2>
               <div style={{margin: 8}}>
               <Droppable droppableId={columnId} key={columnId} >
                 {(provided, snapshot) => {
@@ -99,7 +99,7 @@ const CardSort = () => {
                       {...provided.droppableProps}
                       ref={provided.innerRef}
                       style={{
-                        background: snapshot.isDraggingOver ? 'lightblue' : 'lightgrey',
+                        background: snapshot.isDraggingOver ? '#d5bbf7' : 'lightgrey',
                         padding: 4,
                         width: 300,
                         height: 500,
