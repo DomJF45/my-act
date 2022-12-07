@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 import YoutubeEmbed from '../../util/video/YoutubeEmbed'
 import '../../../styles/processes/Present.css';
 import { Button } from 'react-bootstrap';
+import GoBack from '../../util/back/GoBack';
 
 const Present = () => {
   return (
     <>
+      <div className='container'>
+        <GoBack page={-1} />
+      </div>
       <div id="title-container" className='container d-flex justify-content-center mt-5'>
         <h1>Present</h1>
       </div>
@@ -20,7 +24,6 @@ const Present = () => {
         </div>
         <div>
           <h3>Click <Link to="breathing">here</Link> to do a Breathing Exercise!</h3>
-          
         </div>
       </div>
       

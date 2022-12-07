@@ -21,7 +21,7 @@ const Breathing = () => {
   const startExercise = () => {
     console.log(speedRef.current.value)
     setSpeed(speedRef.current.value)
-    setCounter(10);
+    setCounter(60);
     setFinish(false);
     setStartTimer(true);
     setShowBreath(true);

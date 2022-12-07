@@ -25,6 +25,7 @@ import UserInfo from './components/userInfo/UserInfo';
 import Defusion from './components/processes/defusion/Defusion';
 import FullNavbar from './components/navbar/FullNavbar';
 import Breathing from './components/processes/present/Breathing';
+import CardSort from './components/processes/values/CardSort';
 
 
 function App() {
@@ -72,6 +73,10 @@ function App() {
     {
       path: "/dashboard/processes/values",
       element: <Values />
+    },
+    {
+      path: "/dashboard/processes/values/card-sort",
+      element: <CardSort />
     },
     {
       path: "/dashboard/processes/commitment",
