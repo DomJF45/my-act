@@ -29,6 +29,7 @@ import CardSort from './components/processes/values/CardSort';
 import GoalSetting from './components/processes/commitment/GoalSetting';
 import ObservingSelf from './components/processes/self/ObservingSelf';
 import LabelThoughts from './components/processes/defusion/LabelThoughts';
+import Survey from './components/processes/acceptance/Survey';
 
 
 function App() {
@@ -108,6 +109,10 @@ function App() {
     {
       path: "/dashboard/processes/acceptance",
       element: <Acceptance />
+    },
+    {
+      path: '/dashboard/processes/acceptance/acceptance-survey',
+      element: <Survey />
     },
     {
       path: "/dashboard/events",
