@@ -1,0 +1,13 @@
+#obs-divider {
+  width: 25%;
+}
+
+@media screen and (max-width: 1030px) {
+  #self-exercise {
+    width: 90% !important;
+  }
+  #obs-divider {
+    width: 60%;
+  }
+
+}

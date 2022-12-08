@@ -43,7 +43,7 @@ const FormPage = ({ formId, handleSubmit, setFormData }) => {
   }
 
   return (
-    <Form id='smart-from' onSubmit={handleFormSubmit}>
+    <Form onSubmit={handleFormSubmit}>
     <Form.Group>
         <div>
 

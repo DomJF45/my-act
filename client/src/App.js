@@ -27,6 +27,7 @@ import FullNavbar from './components/navbar/FullNavbar';
 import Breathing from './components/processes/present/Breathing';
 import CardSort from './components/processes/values/CardSort';
 import GoalSetting from './components/processes/commitment/GoalSetting';
+import ObservingSelf from './components/processes/self/ObservingSelf';
 
 
 function App() {
@@ -90,6 +91,10 @@ function App() {
     {
       path: "/dashboard/processes/self",
       element: <Self />
+    },
+    {
+      path: "/dashboard/processes/self/the-observing-self",
+      element: <ObservingSelf />
     },
     {
       path: "/dashboard/processes/defusion",
