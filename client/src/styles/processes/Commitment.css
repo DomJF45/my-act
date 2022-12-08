@@ -1,0 +1,26 @@
+.form-container {
+  display: block;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 2rem auto;
+
+}
+
+.form-example {
+  padding: 0;
+  margin: 0;
+  font-size: small !important;
+}
+
+#smart-card {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1030px) {
+  .form-container {
+    width: 100%;
+  }
+  #smart-card {
+    width: 90% !important;
+  }
+}

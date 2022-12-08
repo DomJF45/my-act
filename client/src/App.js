@@ -26,6 +26,7 @@ import Defusion from './components/processes/defusion/Defusion';
 import FullNavbar from './components/navbar/FullNavbar';
 import Breathing from './components/processes/present/Breathing';
 import CardSort from './components/processes/values/CardSort';
+import GoalSetting from './components/processes/commitment/GoalSetting';
 
 
 function App() {
@@ -81,6 +82,10 @@ function App() {
     {
       path: "/dashboard/processes/commitment",
       element: <Commitment />
+    },
+    {
+      path: "/dashboard/processes/commitment/goal-setting",
+      element: <GoalSetting />
     },
     {
       path: "/dashboard/processes/self",
