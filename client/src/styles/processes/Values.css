@@ -26,10 +26,37 @@
   border-radius: 10px;
 }
 
+#card-containers {
+
+}
+
 #value-column {
 
 }
 
 #value-column::-webkit-scrollbar-track {
   display: none;
+}
+
+@media screen and (max-width: 1030px) {
+
+  #card-containers {
+    display: grid !important;
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+  }
+
+  #value-column {
+    width: 170px !important;
+    height: 250px !important;
+    margin-bottom: 1rem;
+  }
+
+  #card-style {
+    font-size: small;
+    padding: .3rem 1rem !important;
+  }
+  #card-style > h4 {
+    font-size: medium;
+  }
 }

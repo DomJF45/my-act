@@ -2,15 +2,9 @@ import React, { useState } from 'react'
 import { DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
 import { nanoid } from 'nanoid'
 import { v4 as uuid} from 'uuid';
-import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { cardData } from './cardData';
 import GoBack from '../../util/back/GoBack';
 import '../../../styles/processes/Values.css';
-
-const itemsFromBackend = [
-  { id: uuid(), content: 'First Task' },
-  { id: uuid(), content: 'Second Task' }
-]
 
 const columnsFromBackend = {
   [uuid()]: {
@@ -84,13 +78,14 @@ const CardSort = () => {
           justifyContent: 'center',
           height: '100%'
       }}
+      id='card-containers'
     >
       
       <DragDropContext onDragEnd={result => onDragEnd(result, columns, setColumns)}>
         {Object.entries(columns).map(([columnId, column], index) => {
           return(
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-              <h2 style={{color: '#b989f9'}}>{column.name}</h2>
+            <div id='column-container' style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+              <h2 style={{color: '#7a18fa'}}>{column.name}</h2>
               <div style={{margin: 8}}>
               <Droppable droppableId={columnId} key={columnId} >
                 {(provided, snapshot) => {
@@ -102,7 +97,7 @@ const CardSort = () => {
                         background: snapshot.isDraggingOver ? '#d5bbf7' : 'lightgrey',
                         padding: 4,
                         width: 300,
-                        height: 500,
+                        height: 600,
                         overflowY: 'overlay',
                         borderRadius: '15px'
                       }}
@@ -131,7 +126,7 @@ const CardSort = () => {
                                     borderRadius: '10px',
                                     ...provided.draggableProps.style
                                   }}
-                                  
+                                  id='card-style'
                                 >
                                   <h4>{item.value}</h4>
                                   <p>{item.bio}</p>
