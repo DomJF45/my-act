@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Card, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faC, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import BreathingAnimation from './BreathingAnimation';
@@ -21,7 +21,7 @@ const Breathing = () => {
   const startExercise = () => {
     console.log(speedRef.current.value)
     setSpeed(speedRef.current.value)
-    setCounter(60);
+    setCounter(10);
     setFinish(false);
     setStartTimer(true);
     setShowBreath(true);
@@ -76,22 +76,43 @@ const Breathing = () => {
             )     
           }
         </div>
-        <div id="pref-container" className='container w-25' style={showBreath || finish ? {display: 'none'} : {display: 'block'}}>
-          <h3>Set your preferences!</h3>
-          <Form id='start-form' onSubmit={startExercise}>
-            <Form.Group>
-              <Form.Label>Breath Speed</Form.Label>
-              <Form.Control ref={speedRef} defaultValue={5} id='num-form' className='w-25' type='number' size={15} max={15} min={1} />
-              <Form.Control.Feedback type='invalid'>
-                No values less than 1 or larger than 15
-              </Form.Control.Feedback>
-            </Form.Group>
-          </Form>
-          <div className='btn-container justify-content-start' >
-            <Button type='submit' form='start-form'>Start Exercise!</Button>      
-          </div>
-        </div>
+        
       </div>
+      <motion.div 
+        className='container d-flex justify-content-center'
+        initial={{x: 100, opacity: 0}}
+        animate={{x: 0, opacity: 1}}
+        transition={{duration: .5, }}
+        style={showBreath || finish ? {display: 'none'} : {display: 'block'}}
+      >
+        
+        <Card
+          style={showBreath || finish ? {display: 'none'} : {
+            display: 'block',
+            width: '60%',
+            textAlign: 'start'
+          }}
+        
+        >
+          <Card.Body>
+            <div id="pref-container" className='container ' style={showBreath || finish ? {display: 'none'} : {display: 'block'}}>
+              <h3>Set your preferences!</h3>
+              <Form id='start-form' onSubmit={startExercise}>
+                <Form.Group>
+                  <Form.Label>Breath Speed</Form.Label>
+                  <Form.Control ref={speedRef} defaultValue={5} id='num-form' className='w-65' type='number' size={15} max={15} min={1} />
+                  <Form.Control.Feedback type='invalid'>
+                    No values less than 1 or larger than 15
+                  </Form.Control.Feedback>
+                </Form.Group>
+              </Form>
+              <div className='btn-container justify-content-center' >
+                <Button type='submit' form='start-form'>Start Exercise!</Button>      
+              </div>
+            </div>
+          </Card.Body>
+        </Card>
+      </motion.div>
     </>
   )
 }
