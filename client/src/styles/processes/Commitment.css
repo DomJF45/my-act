@@ -6,6 +6,11 @@
 
 }
 
+.form-container > h3 {
+  color: #7a18fa;
+}
+
+
 .form-example {
   padding: 0;
   margin: 0;
@@ -15,6 +20,7 @@
 #smart-card {
   overflow: hidden;
 }
+
 
 @media screen and (max-width: 1030px) {
   .form-container {

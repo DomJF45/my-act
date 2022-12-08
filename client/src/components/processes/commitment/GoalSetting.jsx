@@ -10,44 +10,18 @@ import FormPage from './FormPage';
 const GoalSetting = () => {
 
   const [form, setForm] = useState(1)
-  const [formData, setFormData] = useState({})
-
-  const immediateRef = useRef();
-  const shortRef = useRef();
-  const mediumRef = useRef();
-  const longRef = useRef();
+  const [formData, setFormData] = useState();
+  const [formName, setFormName] = useState();
 
   const nextForm = (newDirection) => {
     setForm(form + 1);
   }
 
   const handleSubmit = (data) => {
-    // const smartData = {
-    //   well: [
-    //     {
-    //       category,
-    //       data
-    //     }
-    //   ],
-    //   needsImprovement: [
-    //     {
-    //       category,
-    //       data
-    //     }
-    //   ],
-    //   myGoals: [
-    //     {
-    //       category,
-    //       data
-    //     }
-    //   ]
-    // }    
+    
+    console.log(data);
     
   }
-
-  console.log(form)
-
-  let formRender;
 
   return (
     <>
@@ -60,15 +34,16 @@ const GoalSetting = () => {
     >
       <Card id='smart-card' className='w-50'>
         <Card.Body>
-          <h1 className='text-center mt-5'>Lets do some goals!</h1>
+          <h1 className='text-center mt-5' style={{color: '#7a18fa'}}>Lets do some goals!</h1>
           <motion.div
             key={form}
             initial={{x: 200, opacity: 0}}
             animate={{x: 0, opacity: 1}}
             transition={{duration: .3}}
-
           >
-            <FormPage formId={form} handleSubmit={handleSubmit} setFormData={setFormData} />
+            
+            <FormPage formId={form} setFormData={setFormData} handleSubmit={handleSubmit} />
+
           </motion.div>
         </Card.Body>
         <Card.Footer className='container d-flex justify-content-end'>

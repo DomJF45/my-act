@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import '../../../styles/util/Utils.css'
 
 const GoToExercise = ({ page }) => {
 
@@ -16,8 +17,9 @@ const GoToExercise = ({ page }) => {
         alignItems: 'center',
         width: '150px',
         float: 'right',
-        borderRadius: '15px'
+        borderRadius: '15px',
       }}
+      id='go-to'
       onClick={() => navigate(page)}
     >
       <p style={{padding: 0, margin: '0 0 0 .5rem'}}>Go to Exercise</p>
