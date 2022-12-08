@@ -175,7 +175,12 @@ const FormPage = ({ formId, handleSubmit, setFormData }) => {
             <p className='form-example'>SMART Goals</p>
           </Form.Label>
           <Form.Control name="mentalGoal" onChange={handleChange} type='text' className='mb-3' />
-          <Button type='submit'>Submit</Button>
+          <Button type='submit' style={{
+            backgroundColor: '#7a18fa',
+            border: '1px #7a18fa',
+            width: '100%',
+            marginTop: '1rem'
+          }}>Submit</Button>
         </div>
         </Form.Group>
       </Form>

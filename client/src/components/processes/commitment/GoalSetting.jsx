@@ -26,15 +26,15 @@ const GoalSetting = () => {
   return (
     <>
     
+    <h1 className='text-center mt-5' style={{color: '#7a18fa'}}>Lets do some goals!</h1>
     <div 
       className='container d-flex justify-content-center'
       style={{
         marginTop: '5rem'
       }}
     >
-      <Card id='smart-card' className='w-50'>
+      <Card id='smart-card' className='w-50 mb-5'>
         <Card.Body>
-          <h1 className='text-center mt-5' style={{color: '#7a18fa'}}>Lets do some goals!</h1>
           <motion.div
             key={form}
             initial={{x: 200, opacity: 0}}
@@ -46,9 +46,6 @@ const GoalSetting = () => {
 
           </motion.div>
         </Card.Body>
-        <Card.Footer className='container d-flex justify-content-end'>
-          <Next setForm={setForm} nextForm={form + 1}  />
-        </Card.Footer>
       </Card>
     </div>
       
