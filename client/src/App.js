@@ -28,6 +28,7 @@ import Breathing from './components/processes/present/Breathing';
 import CardSort from './components/processes/values/CardSort';
 import GoalSetting from './components/processes/commitment/GoalSetting';
 import ObservingSelf from './components/processes/self/ObservingSelf';
+import LabelThoughts from './components/processes/defusion/LabelThoughts';
 
 
 function App() {
@@ -99,6 +100,10 @@ function App() {
     {
       path: "/dashboard/processes/defusion",
       element: <Defusion />
+    },
+    {
+      path: '/dashboard/processes/defusion/label-thoughts',
+      element: <LabelThoughts />
     },
     {
       path: "/dashboard/processes/acceptance",
