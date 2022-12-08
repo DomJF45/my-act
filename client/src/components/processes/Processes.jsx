@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap'
 import FullNavbar from '../navbar/FullNavbar'
 import { processData } from './processData'
 import '../../styles/Processes.css'
-import GoBack from '../util/back/GoBack'
+import GoBack from '../util/directory/GoBack'
 
 const Processes = () => {
 

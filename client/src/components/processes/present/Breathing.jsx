@@ -30,6 +30,7 @@ const Breathing = () => {
   useEffect(() => {
 
     // make API fetch here
+    // destructure { draggableId, destination.droppableId } 
 
     if (startTimer) {
       const timer = counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);

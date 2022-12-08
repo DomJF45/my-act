@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import FullNavbar from '../navbar/FullNavbar'
-import GoBack from '../util/back/GoBack'
+import GoBack from '../util/directory/GoBack'
 
 const Events = () => {
   return (

@@ -3,7 +3,7 @@ import { DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
 import { nanoid } from 'nanoid'
 import { v4 as uuid} from 'uuid';
 import { cardData } from './cardData';
-import GoBack from '../../util/back/GoBack';
+import GoBack from '../../util/directory/GoBack';
 import '../../../styles/processes/Values.css';
 import { Button } from 'react-bootstrap';
 
