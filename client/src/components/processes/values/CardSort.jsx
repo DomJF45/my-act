@@ -5,27 +5,35 @@ import { v4 as uuid} from 'uuid';
 import { cardData } from './cardData';
 import GoBack from '../../util/back/GoBack';
 import '../../../styles/processes/Values.css';
+import { Button } from 'react-bootstrap';
 
 const columnsFromBackend = {
-  [uuid()]: {
+  ['unsorted']: {
     name: 'Unsorted',
     items: cardData
   },
-  [uuid()]: {
+  ['very-important']: {
     name: 'Very Important',
     items: []
   },
-  [uuid()]: {
+  ['important']: {
     name: 'Important',
     items: []
   },
-  [uuid()]: {
+  ['not-important']: {
     name: 'Not Important',
     items: []
   }
 }
 
-const onDragEnd = (result, columns, setColumns) => {
+const onDragEnd = (result, columns, setColumns, setEndResult, endResult) => {
+
+  const tempResult = [
+    ...endResult,
+    result
+  ]
+  setEndResult(tempResult);
+
   if(!result.destination) return;
   const { source, destination } = result;
 
@@ -68,6 +76,14 @@ const onDragEnd = (result, columns, setColumns) => {
 const CardSort = () => {
 
   const [columns, setColumns] = useState(columnsFromBackend);
+  const [endResult, setEndResult] = useState([]);
+
+  const saveResults = () => {
+
+    // write logic to save results to database here
+
+    console.log(endResult);
+  }
 
   return (
     <div className='container'>
@@ -81,7 +97,7 @@ const CardSort = () => {
       id='card-containers'
     >
       
-      <DragDropContext onDragEnd={result => onDragEnd(result, columns, setColumns)}>
+      <DragDropContext onDragEnd={result => onDragEnd(result, columns, setColumns, setEndResult, endResult)}>
         {Object.entries(columns).map(([columnId, column], index) => {
           return(
             <div id='column-container' style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
@@ -124,12 +140,16 @@ const CardSort = () => {
                                     backgroundColor: snapshot.isDragging ? '#7a18fa' : '#9747FF',
                                     color: '#fff',
                                     borderRadius: '10px',
+                                    textAlign: 'center',
                                     ...provided.draggableProps.style
                                   }}
                                   id='card-style'
                                 >
-                                  <h4>{item.value}</h4>
-                                  <p>{item.bio}</p>
+                                  <div className='inner-card-1'>
+                                    <h4>{item.value}</h4>
+                                    <div className='div-divider-card' />
+                                    <p>{item.bio}</p>
+                                  </div>
                                 </div>
                               )
                             }}
@@ -148,6 +168,14 @@ const CardSort = () => {
         })}
       </DragDropContext>
     </div>
+      <div 
+        className='btn-container'
+        style={{
+          marginBottom: '2rem'
+        }}
+      >
+        <Button onClick={saveResults}>Save</Button>
+      </div>
     </div>
   )
 }
