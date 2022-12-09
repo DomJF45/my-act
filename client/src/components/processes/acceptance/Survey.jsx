@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Form, Card, Button } from 'react-bootstrap';
+import Done from '../../util/directory/Done';
 
 
 const questionsFromBackend = [
@@ -27,7 +28,9 @@ const Survey = () => {
   const [check, setCheck] = useState(0);
   const [questions, setQuestions] = useState(questionsFromBackend);
   const [likertOptions, setLikertOptions] = useState(optionsFromBackend);
-  
+  const [finished, setFinished] = useState(false);
+
+
   const [answers, setAnswers] = useState([
     {question: '', answer: ''}
   ])
@@ -44,6 +47,13 @@ const Survey = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(answers);
+    setFinished(true);
+  }
+
+  if (finished) {
+    return (
+      <Done />
+    )
   }
 
   return (

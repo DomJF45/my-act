@@ -1,14 +1,18 @@
 import React from 'react'
 import YoutubeEmbed from '../../util/video/YoutubeEmbed'
 import GoToExercise from '../../util/directory/GoToExercise';
+import GoBack from '../../util/directory/GoBack';
 
 const Self = () => {
   return (
     <>
+      <div className='container'>
+        <GoBack page={-1} />
+      </div>
       <div id="title-container" className='container d-flex justify-content-center mt-5'>
         <h1>Self</h1>
       </div>
-      <div className='container'>
+      <div id='process-container' className='container'>
         <div className='video-container'>
           <YoutubeEmbed embedId={"kbarzx9AQmc"} />
         </div>

@@ -1,14 +1,15 @@
 import React from 'react'
 import GoToExercise from '../../util/directory/GoToExercise'
 import YoutubeEmbed from '../../util/video/YoutubeEmbed'
-
+import GoBack from '../../util/directory/GoBack'
 const Commitment = () => {
   return (
     <>
+      <GoBack page={-1} />
       <div id="title-container" className='container d-flex justify-content-center mt-5'>
         <h1>Commitment</h1>
       </div>
-      <div className='container'>
+      <div id="process-container" className='container'>
         <div className='video-container'>
           <YoutubeEmbed embedId={"uDLMaPG2Ock"} />
         </div>

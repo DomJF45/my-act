@@ -4,6 +4,14 @@
   animation: FadeInAndUp .5s forwards;
 }
 
+#process-container {
+  width: 75% !important;
+}
+
+#back-dir {
+  width: 75%;
+}
+
 .back {
   margin-top: 2rem;
   display: flex;
@@ -13,6 +21,15 @@
 }
 .back:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1030px) {
+  #process-container {
+    width: 95% !important;
+  }
+  #back-dir {
+    width: 95%;
+  }
 }
 
 

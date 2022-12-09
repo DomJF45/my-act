@@ -18,6 +18,8 @@ const GoToExercise = ({ page }) => {
         width: '150px',
         float: 'right',
         borderRadius: '15px',
+        marginBottom: '5rem',
+        marginRight: '10%'
       }}
       id='go-to'
       onClick={() => navigate(page)}
