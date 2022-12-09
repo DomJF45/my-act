@@ -6,7 +6,12 @@ const Services = () => {
   return (
     <>
       <div className='services-container'>
-
+        {/* 
+          Ralph Molu:
+        
+          Write html here,
+          make sure everything is inside this div!
+        */}
       </div>
     </>
   )

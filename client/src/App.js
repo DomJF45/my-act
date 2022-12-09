@@ -170,7 +170,7 @@ function App() {
 
       </UserContext.Provider> */}
       <UserContextProvider>
-        <FullNavbar user={true} setUser={setUser} />
+        <FullNavbar user={ user ? true : false} setUser={setUser} />
         <RouterProvider router={router} />
         <ToastContainer />
       </UserContextProvider>
