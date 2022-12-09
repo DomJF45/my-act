@@ -6,7 +6,7 @@ import GoBack from '../../util/directory/GoBack';
 const Self = () => {
   return (
     <>
-      <div className='container'>
+      <div id='back-dir' className='container'>
         <GoBack page={-1} />
       </div>
       <div id="title-container" className='container d-flex justify-content-center mt-5'>

@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ObserverForm from './ObserverForm'
 import '../../../styles/processes/Self.css';
+import Done from '../../util/directory/Done';
 
 const ObservingSelf = () => {
+
+  const [finished, setFinished] = useState(false);
+
+  if (finished) {
+    return (
+      <Done />
+    )
+  }
+
   return (
     <>
     
@@ -27,7 +37,7 @@ const ObservingSelf = () => {
       
     </div>
     <div className='container d-flex justify-content-center p-0'>
-      <ObserverForm />
+      <ObserverForm setFinished={setFinished} />
     </div>
     </>
   )

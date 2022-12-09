@@ -8,6 +8,7 @@ import EventCard from './cards/EventCard'
 import ProcessesCard from './cards/ProcessesCard'
 import SettingsCard from './cards/SettingsCard'
 import { useEffect } from 'react'
+import ExercisesCard from './cards/ExercisesCard'
 
 const Dashboard = ({user}) => {
 
@@ -23,7 +24,7 @@ const Dashboard = ({user}) => {
           <div className="link-container">
             <ProcessesCard />
             <EventCard />
-            <SettingsCard />
+            <ExercisesCard />
           </div>
         </div>
       </Container>

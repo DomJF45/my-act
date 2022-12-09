@@ -5,13 +5,16 @@ import GoBack from '../../util/directory/GoBack'
 const Commitment = () => {
   return (
     <>
-      <GoBack page={-1} />
+      <div id='back-dir' className='container'>
+
+        <GoBack page={-1} />
+      </div>
       <div id="title-container" className='container d-flex justify-content-center mt-5'>
         <h1>Commitment</h1>
       </div>
       <div id="process-container" className='container'>
         <div className='video-container'>
-          <YoutubeEmbed embedId={"uDLMaPG2Ock"} />
+          <YoutubeEmbed embedId={"i6SlZEzKSNg"} />
         </div>
         <div className='content'>
           <h3>All about Commitment:</h3>

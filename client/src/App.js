@@ -30,6 +30,8 @@ import GoalSetting from './components/processes/commitment/GoalSetting';
 import ObservingSelf from './components/processes/self/ObservingSelf';
 import LabelThoughts from './components/processes/defusion/LabelThoughts';
 import Survey from './components/processes/acceptance/Survey';
+import ExercisesCard from './components/dashboard/cards/ExercisesCard';
+import AllExercises from './components/processes/AllExercises';
 
 
 function App() {
@@ -121,6 +123,10 @@ function App() {
     {
       path: "/dashboard/user-info",
       element: <UserInfo />
+    },
+    {
+      path: '/dashboard/exercises',
+      element: <AllExercises />
     }
   
   ])

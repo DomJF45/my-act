@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import GoToExercise from '../../util/directory/GoToExercise';
 import Next from '../../util/directory/Next';
 import FormPage from './FormPage';
+import Done from '../../util/directory/Done';
 
 
 const GoalSetting = () => {
@@ -12,6 +13,7 @@ const GoalSetting = () => {
   const [form, setForm] = useState(1)
   const [formData, setFormData] = useState();
   const [formName, setFormName] = useState();
+  const [finished, setFinished] = useState(false);
 
   const nextForm = (newDirection) => {
     setForm(form + 1);
@@ -20,7 +22,14 @@ const GoalSetting = () => {
   const handleSubmit = (data) => {
     
     console.log(data);
+    setFinished(true);
     
+  }
+
+  if (finished) {
+    return (
+      <Done />
+    )
   }
 
   return (

@@ -6,6 +6,7 @@ import { cardData } from './cardData';
 import GoBack from '../../util/directory/GoBack';
 import '../../../styles/processes/Values.css';
 import { Button } from 'react-bootstrap';
+import Done from '../../util/directory/Done';
 
 const columnsFromBackend = {
   ['unsorted']: {
@@ -77,17 +78,24 @@ const CardSort = () => {
 
   const [columns, setColumns] = useState(columnsFromBackend);
   const [endResult, setEndResult] = useState([]);
+  const [finished, setFinished] = useState(false);
 
   const saveResults = () => {
 
     // write logic to save results to database here
 
     console.log(endResult);
+    setFinished(true);
+  }
+
+  if (finished) {
+    return (
+      <Done />
+    )
   }
 
   return (
-    <div className='container'>
-      <GoBack page={-1} />
+    <div className='container mt-4'>
     <div
       style={{
           display: 'flex',
@@ -174,7 +182,12 @@ const CardSort = () => {
           marginBottom: '2rem'
         }}
       >
-        <Button onClick={saveResults}>Save</Button>
+        <Button onClick={saveResults} style={{
+          backgroundColor: '#7a18fa',
+          border: '1px #7a18fa',
+          width: '100%',
+          marginTop: '1rem'
+        }}>Save</Button>
       </div>
     </div>
   )

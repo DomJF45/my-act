@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { Form, Card, Button, FormControl } from 'react-bootstrap'
+import Done from '../../util/directory/Done';
 
 const LabelThoughts = () => {
 
+  const [finished, setFinished] = useState(false);
   const [form, newForm] = useState([
     {thought: 'n/a', label: 'n/a'}
   ]);
@@ -21,6 +23,13 @@ const LabelThoughts = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(form);
+    setFinished(true);
+  }
+
+  if (finished) {
+    return (
+      <Done />
+    )
   }
 
   return (

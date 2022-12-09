@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Form, Button, Card } from 'react-bootstrap';
 
-const ObserverForm = () => {
+const ObserverForm = ({ setFinished }) => {
 
   const [dataState, setDataState] = useState({
     emotion: '',
@@ -25,6 +25,7 @@ const ObserverForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(dataState);
+    setFinished(true);
   }
 
   return (

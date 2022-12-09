@@ -13,7 +13,7 @@ const Processes = () => {
   return (
     <>
       <Container>
-        <GoBack page={'/dashboard'} />
+        <GoBack page={-1} />
         <div className='animate-fade-up'>
           <div className="link-container">
             { processData.map((process) => (
