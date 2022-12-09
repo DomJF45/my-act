@@ -4,8 +4,13 @@ import { motion } from 'framer-motion';
 import { Button, Card, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faC, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 import BreathingAnimation from './BreathingAnimation';
 import '../../../styles/Breathing.css';
+import { useContext } from 'react';
+import { UserContext, UserContextProvider } from '../../../App';
+
+const API_URL = '/api/breathing'
 
 const Breathing = () => {
 
@@ -16,21 +21,43 @@ const Breathing = () => {
   const [finish, setFinish] = useState(false);
   const [counter, setCounter] = useState(60);
   const [endCounter, setEndCounter] = useState(8);
+  // const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const user = useContext(UserContext)
+  
   
   const startExercise = () => {
     console.log(speedRef.current.value)
     setSpeed(speedRef.current.value)
-    setCounter(10);
+    setCounter(60);
     setFinish(false);
     setStartTimer(true);
     setShowBreath(true);
   }
 
+  
+
+  console.log(user)
+  
   useEffect(() => {
 
     // make API fetch here
-    // destructure { draggableId, destination.droppableId } 
+    // data is ONLY breath speed, it is the same so need for holding, or breath out speed
+
+    // mock fetch
+    
+    // setUser(JSON.parse(localStorage.getItem('user')));
+    // setUser(UserContext.Provider._context._currentValue)
+
+    const getData = async () => {
+      try {
+        const res = await axios.get(API_URL);
+        return res.data;
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    // setSpeed(getData);
 
     if (startTimer) {
       const timer = counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
@@ -54,6 +81,7 @@ const Breathing = () => {
   return (
     <>
       <div className='bottom'>
+        <h2>Welcome {user?.name}</h2>
         <div>
           { 
             finish && (
@@ -101,7 +129,7 @@ const Breathing = () => {
               <Form id='start-form' onSubmit={startExercise}>
                 <Form.Group>
                   <Form.Label>Breath Speed</Form.Label>
-                  <Form.Control ref={speedRef} defaultValue={5} id='num-form' className='w-65' type='number' size={15} max={15} min={1} />
+                  <Form.Control ref={speedRef} defaultValue={speed} id='num-form' className='w-65' type='number' size={15} max={15} min={1} />
                   <Form.Control.Feedback type='invalid'>
                     No values less than 1 or larger than 15
                   </Form.Control.Feedback>

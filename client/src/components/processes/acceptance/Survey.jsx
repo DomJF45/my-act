@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { Form, Card, Button } from 'react-bootstrap';
+import axios from 'axios';
 import Done from '../../util/directory/Done';
 
+// API url here
+const API_URL = '/api/survey'
 
 const questionsFromBackend = [
   {q: 'My painful experiences and memories make it difficult for me to live a life that I would value.'},
@@ -25,6 +28,8 @@ const optionsFromBackend = [
 
 const Survey = () => {
 
+  const userIdTest = '12345';
+
   const [check, setCheck] = useState(0);
   const [questions, setQuestions] = useState(questionsFromBackend);
   const [likertOptions, setLikertOptions] = useState(optionsFromBackend);
@@ -44,10 +49,61 @@ const Survey = () => {
    
   }
   
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(answers);
+    
+
+    const field_one = answers[1]?.answer ? answers[1].answer : 'n/a';
+    const field_two = answers[2]?.answer ? answers[2].answer : 'n/a';
+    const field_three = answers[3]?.answer ? answers[3].answer : 'n/a';
+    const field_four = answers[4]?.answer ? answers[4].answer : 'n/a';
+    const field_five = answers[5]?.answer ? answers[5].answer : 'n/a';
+    const field_six = answers[6]?.answer ? answers[6].answer : 'n/a';
+    const field_seven = answers[7]?.answer ? answers[7].answer : 'n/a';
+
+    const data = {
+      field_one,
+      field_two,
+      field_three,
+      field_four,
+      field_five,
+      field_six,
+      field_seven,
+      userIdTest
+    }
+
+    console.log(data);
+
+    try {
+      const res = await axios.post(API_URL, data);
+      console.log(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+
+
+    /**
+     * Handle POST here
+     * fields: {
+     *  userId,
+     *  q1 and answer
+     *  q2 and answer
+     *  ...
+     *  q7 and answer  
+     * }
+     */
+
+    /**
+     * data looks like: 
+     * 0{question: 1, answer: 'string'}, 
+     * 1{question: 2, answer: 'string'}, 
+     * ... 
+     * 7{question: 7, answer: 'string'}
+     */
+
+
     setFinished(true);
+
   }
 
   if (finished) {

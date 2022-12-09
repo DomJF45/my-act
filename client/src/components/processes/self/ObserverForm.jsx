@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Form, Button, Card } from 'react-bootstrap';
+import axios from 'axios';
+
+const API_URL = '/api/test';
 
 const ObserverForm = ({ setFinished }) => {
 
@@ -25,6 +28,15 @@ const ObserverForm = ({ setFinished }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(dataState);
+
+    const submitData = async () => {
+      try {
+        const res = await axios.post(API_URL)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+
     setFinished(true);
   }
 

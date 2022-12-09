@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useContext } from 'react';
 import Navigation from '../navbar/Navigation';
 import { Link } from 'react-router-dom';
 import ErrorToast from '../util/toasts/ErrorToast';
@@ -7,8 +7,9 @@ import Card from 'react-bootstrap/Card';
 import '../../styles/Register.css'
 import { Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
+import { UserContext } from '../../App';
 
-const Register = () => {
+const Register = ({ setUser }) => {
 
   const nameRef = useRef();
   const emailRef = useRef();
@@ -23,12 +24,20 @@ const Register = () => {
       toast.error(message);
       
     } else {
+
       const userData = {
+        id: '123',
         name: nameRef.current.value,
-        emailRef: emailRef.current.value,
-        passRef: passRef.current.value,
-        confirmPassRef: confirmPassRef.current.value
+        email: emailRef.current.value,
+        password: passRef.current.value,
       }
+
+      setUser(userData);
+
+      /**
+       * Post user data here
+       * fields: name, email, password, contributer
+       */
   
       console.log(userData);
     }
@@ -50,6 +59,11 @@ const Register = () => {
                 <Form.Control type="text" className="mb-4" ref={nameRef} />
                 <Form.Label>Email:</Form.Label>
                 <Form.Control type="email" className="mb-4" ref={emailRef} />
+                <Form.Label>Choose your Credentials</Form.Label>
+                <Form.Select>
+                  <option>User</option>
+                  <option>Contributer</option>
+                </Form.Select>
                 <Form.Label>Password:</Form.Label>
                 <Form.Control type="password" className="mb-4" ref={passRef} />
                 <Form.Label>Confirm Password:</Form.Label>

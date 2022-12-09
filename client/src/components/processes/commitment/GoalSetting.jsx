@@ -6,7 +6,9 @@ import GoToExercise from '../../util/directory/GoToExercise';
 import Next from '../../util/directory/Next';
 import FormPage from './FormPage';
 import Done from '../../util/directory/Done';
+import axios from 'axios';
 
+const API_URL = 'api/test'
 
 const GoalSetting = () => {
 
@@ -19,10 +21,19 @@ const GoalSetting = () => {
     setForm(form + 1);
   }
 
-  const handleSubmit = (data) => {
+  const handleSubmit = async (data) => {
     
+    try {
+
+      const res = await axios.post(API_URL, data)
+      console.log(res);
+    } catch (err) {
+      console.log(err)
+    }
+
     console.log(data);
     setFinished(true);
+
     
   }
 

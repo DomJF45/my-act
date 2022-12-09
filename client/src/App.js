@@ -1,5 +1,5 @@
 import './index.css';
-import { useState } from 'react';
+import { useState, createContext, useContext, useEffect } from 'react';
 import { 
   createBrowserRouter, 
   RouterProvider,
@@ -32,12 +32,45 @@ import LabelThoughts from './components/processes/defusion/LabelThoughts';
 import Survey from './components/processes/acceptance/Survey';
 import ExercisesCard from './components/dashboard/cards/ExercisesCard';
 import AllExercises from './components/processes/AllExercises';
+import Footer from './components/footer/Footer';
 
+const fakeUserData = {
+  id: '123',
+  name: 'john',
+  email: 'john@mail.com',
+  password: '123'
+}
+
+const UserContext = createContext();
+
+const UserContextProvider = ({ children }) => {
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const fetchUser = () => {
+      setUser(JSON.parse(localStorage.getItem('user')))
+    }
+    fetchUser();
+  }, [])
+
+  return (
+    <UserContext.Provider value={user}>
+      {children}
+    </UserContext.Provider>
+  )
+
+}
+
+export { UserContext, UserContextProvider }
 
 function App() {
 
-  const [user, setUser] = useState(false)
+  const [user, setUser] = useState();
 
+  const handleSetUser = (data) => {
+    localStorage.setItem('user', JSON.stringify(data));
+  }
 
   const router = createBrowserRouter([
     {
@@ -46,7 +79,7 @@ function App() {
     },
     {
       path: "/about",
-      element: <About />
+      element:  <About />
     },
     {
       path: "/services",
@@ -58,7 +91,7 @@ function App() {
     },
     {
       path: "/register",
-      element: <Register />
+      element: <Register setUser={handleSetUser} />
     },
     {
       path: "/dashboard",
@@ -133,9 +166,15 @@ function App() {
 
   return (
     <>
-      <FullNavbar user={true} setUser={setUser} />
-      <RouterProvider router={router} />
-      <ToastContainer />
+      {/* <UserContext.Provider value={JSON.parse(localStorage.getItem('user'))}>
+
+      </UserContext.Provider> */}
+      <UserContextProvider>
+        <FullNavbar user={true} setUser={setUser} />
+        <RouterProvider router={router} />
+        <ToastContainer />
+      </UserContextProvider>
+     
     </>
   );
 }

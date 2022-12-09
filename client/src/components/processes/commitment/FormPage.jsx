@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import '../../../styles/processes/Commitment.css';
 
+const userIdTest = '12345'
+
 const FormPage = ({ formId, handleSubmit, setFormData }) => {
 
   const [dataState, setDataState] = useState({
@@ -39,7 +41,12 @@ const FormPage = ({ formId, handleSubmit, setFormData }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     
-    handleSubmit(dataState);
+    const data = {
+      ...dataState,
+      userIdTest
+    }
+
+    handleSubmit(data);
   }
 
   return (

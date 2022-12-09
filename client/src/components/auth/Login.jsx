@@ -15,15 +15,17 @@ const Login = ({ setUser }) => {
     e.preventDefault();
 
     const userData = {
-      emailRef: emailRef.current.value,
+      email: emailRef.current.value,
       passRef: passRef.current.value,
     }
 
     console.log(userData);
 
-    setUser(true);
+    /**
+     * handle login post here
+     * fields: email, password
+     */
 
-    navigate('/dashboard')
   }
 
   return (
