@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { useNavigate } from 'react-router';
 import '../../styles/Navigation.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container"
 import Button from 'react-bootstrap/Button';
+import { UserContext } from '../../App';
 
-const FullNavbar = ({user, setUser}) => {
+const FullNavbar = () => {
+
+  const user = useContext(UserContext);
 
   const handleLogout = () => {
-    setUser(false);
+    localStorage.removeItem('user');
   }
 
   if (user) {

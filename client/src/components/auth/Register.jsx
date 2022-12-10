@@ -1,6 +1,6 @@
 import React, { useRef, useContext } from 'react';
 import Navigation from '../navbar/Navigation';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ErrorToast from '../util/toasts/ErrorToast';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
@@ -8,15 +8,22 @@ import '../../styles/Register.css'
 import { Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { UserContext } from '../../App';
+import axios from 'axios';
+import { PrismaClient } from '@prisma/client';
+
+const API_URL = '/api/users/register';
+
+
 
 const Register = ({ setUser }) => {
-
+  
   const nameRef = useRef();
   const emailRef = useRef();
   const passRef = useRef();
   const confirmPassRef = useRef();
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (passRef.current.value !== confirmPassRef.current.value) {
@@ -32,12 +39,22 @@ const Register = ({ setUser }) => {
         password: passRef.current.value,
       }
 
-      setUser(userData);
+      
 
       /**
        * Post user data here
        * fields: name, email, password, contributer
        */
+
+      try {
+        await axios.post(API_URL, userData);
+        localStorage.setItem('user', JSON.stringify(userData));
+        setUser(userData);
+        navigate('/dashboard')
+      } catch (err) {
+        console.log(err)
+      }
+     
   
       console.log(userData);
     }

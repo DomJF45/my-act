@@ -4,6 +4,9 @@ import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import '../../styles/Register.css'
 import { Button } from 'react-bootstrap';
+import axios from 'axios';
+
+const API_URL = '/api/users/login'
 
 const Login = ({ setUser }) => {
 
@@ -11,12 +14,12 @@ const Login = ({ setUser }) => {
   const passRef = useRef();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const userData = {
       email: emailRef.current.value,
-      passRef: passRef.current.value,
+      password: passRef.current.value,
     }
 
     console.log(userData);
@@ -25,6 +28,15 @@ const Login = ({ setUser }) => {
      * handle login post here
      * fields: email, password
      */
+
+    try {
+      const login = await axios.post(API_URL, userData);
+      setUser(login);
+      localStorage.setItem('user', JSON.parse(login));
+      navigate('/dashboard');
+    } catch (err) {
+      console.log(err)
+    }
 
   }
 

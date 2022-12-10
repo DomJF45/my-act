@@ -1,0 +1,32 @@
+{
+  "name": "my-act",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DomJF45/my-act.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DomJF45/my-act/issues"
+  },
+  "homepage": "https://github.com/DomJF45/my-act#readme",
+  "devDependencies": {
+    "prisma": "^4.7.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mssql": "^9.0.1",
+    "nodemon": "^2.0.20"
+  }
+}

@@ -52,7 +52,7 @@ const UserContextProvider = ({ children }) => {
       setUser(JSON.parse(localStorage.getItem('user')))
     }
     fetchUser();
-  }, [])
+  }, [children])
 
   return (
     <UserContext.Provider value={user}>
@@ -66,11 +66,7 @@ export { UserContext, UserContextProvider }
 
 function App() {
 
-  const [user, setUser] = useState();
-
-  const handleSetUser = (data) => {
-    localStorage.setItem('user', JSON.stringify(data));
-  }
+  const [user, setUser] = useState(null);
 
   const router = createBrowserRouter([
     {
@@ -91,11 +87,11 @@ function App() {
     },
     {
       path: "/register",
-      element: <Register setUser={handleSetUser} />
+      element: <Register setUser={setUser} />
     },
     {
       path: "/dashboard",
-      element: <Dashboard user={user} />
+      element: <Dashboard />
     },
     {
       path: "/dashboard/processes",
@@ -170,7 +166,7 @@ function App() {
 
       </UserContext.Provider> */}
       <UserContextProvider>
-        <FullNavbar user={ user ? true : false} setUser={setUser} />
+        <FullNavbar user={ user ? true : false} />
         <RouterProvider router={router} />
         <ToastContainer />
       </UserContextProvider>

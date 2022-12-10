@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FullNavbar from './components/navbar/FullNavbar';
 
+
 const fakeUserData = {
   id: '123',
   name: 'john',

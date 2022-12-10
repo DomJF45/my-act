@@ -8,9 +8,20 @@ import EventCard from './cards/EventCard'
 import ProcessesCard from './cards/ProcessesCard'
 import SettingsCard from './cards/SettingsCard'
 import ExercisesCard from './cards/ExercisesCard'
+import { useContext } from 'react'
+import { UserContext } from '../../App'
 
-const Dashboard = ({user}) => {
+const Dashboard = () => {
 
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  let testUser;
+  if (user) {
+    testUser = true;
+  } else {
+    testUser = false;
+  }
+  
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,6 +31,11 @@ const Dashboard = ({user}) => {
      * fields: userId
      */
 
+    if (!testUser) {
+      navigate('/')
+    }
+
+    console.log(testUser)
 
   })
 
