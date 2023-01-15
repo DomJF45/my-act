@@ -1,12 +1,11 @@
-const sql = require('mssql');
+const mongoose = require('mongoose')
 
 const connectDB = async () => {
   try {
-    const config = await sql.connect(`Server=actapp.database.windows.net,1433;Database=actdatabase;User Id=actadmin;Password=Tequila.7;Encrypt=true'`);
-    
-    console.log('db connected');
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`Connected to ${conn.connection.host}`.yellow.underline)
   } catch(err) {
-    console.log(err)
+    console.log(err);
     process.exit(1);
   }
 }

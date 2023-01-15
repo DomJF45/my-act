@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react';
+import React, { useRef, useContext, useState } from 'react';
 import Navigation from '../navbar/Navigation';
 import { Link, useNavigate } from 'react-router-dom';
 import ErrorToast from '../util/toasts/ErrorToast';
@@ -17,26 +17,32 @@ const API_URL = '/api/users/register';
 
 const Register = ({ setUser }) => {
   
-  const nameRef = useRef();
-  const emailRef = useRef();
-  const passRef = useRef();
-  const confirmPassRef = useRef();
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [formUserType, setFormUserType] = useState('Basic User');
+  const [userPassword, setUserPassword] = useState('');
+  const [confirmPass, setConfirmPass] = useState('');
+
   const navigate = useNavigate();
+
+  const initUser = async(userData) => {
+
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (passRef.current.value !== confirmPassRef.current.value) {
+    if (userPassword !== confirmPass) {
       const message = 'Passwords do not match';
       toast.error(message);
       
     } else {
 
       const userData = {
-        id: '123',
-        name: nameRef.current.value,
-        email: emailRef.current.value,
-        password: passRef.current.value,
+        name: userName,
+        email: userEmail,
+        userType: formUserType,
+        password: userPassword,
       }
 
       
@@ -47,14 +53,17 @@ const Register = ({ setUser }) => {
        */
 
       try {
-        await axios.post(API_URL, userData);
-        localStorage.setItem('user', JSON.stringify(userData));
-        setUser(userData);
-        navigate('/dashboard')
+        const res = await axios.post(API_URL, userData);
+        if (res) {
+          localStorage.setItem('user', JSON.stringify(res.data));
+          setUser(res.data);
+          navigate('/dashboard');
+        }
       } catch (err) {
         console.log(err)
       }
      
+
   
       console.log(userData);
     }
@@ -73,18 +82,18 @@ const Register = ({ setUser }) => {
             <Form onSubmit={handleSubmit} id='form-id'>
               <Form.Group>
                 <Form.Label>Name:</Form.Label>
-                <Form.Control type="text" className="mb-4" ref={nameRef} />
+                <Form.Control type="text" className="mb-4" value={userName} onChange={(e) => setUserName(e.target.value)} />
                 <Form.Label>Email:</Form.Label>
-                <Form.Control type="email" className="mb-4" ref={emailRef} />
+                <Form.Control type="email" className="mb-4" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} />
                 <Form.Label>Choose your Credentials</Form.Label>
-                <Form.Select>
-                  <option>User</option>
-                  <option>Contributer</option>
+                <Form.Select value={formUserType} onChange={(e) => setFormUserType(e.target.value)}>
+                  <option value={'Basic User'}>Basic User</option>
+                  <option value={'Therapist'}>Therapist</option>
                 </Form.Select>
                 <Form.Label>Password:</Form.Label>
-                <Form.Control type="password" className="mb-4" ref={passRef} />
+                <Form.Control type="password" className="mb-4" value={userPassword} onChange={(e) => setUserPassword(e.target.value)} />
                 <Form.Label>Confirm Password:</Form.Label>
-                <Form.Control type="password" className="mb-4" ref={confirmPassRef} />
+                <Form.Control type="password" className="mb-4" value={confirmPass} onChange={(e) => setConfirmPass(e.target.value)} />
               </Form.Group>
             </Form>
           </Card.Body>

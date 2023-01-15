@@ -6,22 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FullNavbar from './components/navbar/FullNavbar';
-
-
-const fakeUserData = {
-  id: '123',
-  name: 'john',
-  password: '123',
-  email: 'john@mail.com'
-}
-
-
-
+import { store } from './app/store';
+import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={store}>
     <App />
-  
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

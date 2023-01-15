@@ -32,7 +32,7 @@ const Login = ({ setUser }) => {
     try {
       const login = await axios.post(API_URL, userData);
       setUser(login);
-      localStorage.setItem('user', JSON.parse(login));
+      localStorage.setItem('user', JSON.stringify(login));
       navigate('/dashboard');
     } catch (err) {
       console.log(err)

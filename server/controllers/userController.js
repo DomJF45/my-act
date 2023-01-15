@@ -1,58 +1,100 @@
-const sql = require('mssql');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const asyncHandler = require('express-async-handler');
+const User = require('../models/userModel');
+const initUser = require('../controllers/exerciseController')
 
-const config = {
-  user: 'actadmin',
-  password: 'Tequila.7',
-  server: 'actapp.database.windows.net',
-  database: 'actdatabase'
-}
+const registerUser = asyncHandler(async (req, res) => {
+  const { name, email, userType, password } = req.body;
 
-const registerUser = async (req, res) => {
-  const { id, name, email, password } = req.body;
+  if (!name || !email || !userType || !password) {
+    res.status(400);
+    throw new Error('Please add all fields');
+  }
 
-  sql.connect(config, (err) => {
-    if (err) console.log(err);
+  // check if user exists
 
-    const request = new sql.Request();
-
-    try {
-      request.query(`INSERT INTO [dbo].[User2] (Email, FirstName, Password) VALUES('${email}', '${name}', '${password}')`, (err, recordset) => {
-        if (err) console.log(err);
+  const userExists = await User.findOne({email})
   
-        res.send(recordset);
-      })
-    } catch (err) {
-      console.log(err)
-    }
-    
+  if (userExists) {
+    res.status(400);
+    throw new Error('Email already in use');
+  }
 
+  // hash the password // use bcrypt
+
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(password, salt);
+
+  // create the user
+
+  const user = await User.create({
+    name,
+    email,
+    userType,
+    password: hashedPassword,
   })
-  
-}
 
-const loginUser = async (req, res) => {
+  if (user) {
+    res.status(201).json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,
+      token: generateToken(user._id)
+    })
+  } else {
+    res.status(400);
+    throw new Error('Invalid user data');
+  }
+
+})
+
+const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
-  sql.connect(config, (err) => {
-    if (err) console.log(err);
+  
+  //check for user email
 
-    const request = new sql.Request();
-    let user;
-    try {
-      request.query(`SELECT TOP 1 FirstName, Email FROM [dbo].[User2] WHERE Email = '${email}' AND '${password}' = Password`, (err, result, fields) => {
-        if (err) throw err;
-        console.log(result)
-        res.send(result)
-      })
-      
-      
-      
-    } catch (e) {
-      console.log(e)
-    }
+  const user = await User.findOne({email});
+
+  // check password
+
+  if (user && bcrypt.compare(password, user.password)) {
+    // user.password is hashed
+    res.status(201).json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,
+      token: generateToken(user._id)
+    })
+  } else {
+    res.status(400);
+    throw new Error('Invalid Credentials');
+  }
+
+})
+
+// private route
+// auth middleware
+const getMe = asyncHandler(async (req, res) => {
+  const { _id, name, email } = await User.findById(req.user.id);
+  res.status(201).json({
+    id: _id,
+    name,
+    email,
+    userType
+  })
+})
+
+// generate token
+
+const generateToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: '30d'
   })
 }
 
-module.exports ={
+module.exports = {
   registerUser,
-  loginUser
+  loginUser,
+  getMe
 }

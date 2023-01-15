@@ -31,9 +31,6 @@ const Dashboard = () => {
      * fields: userId
      */
 
-    if (!testUser) {
-      navigate('/')
-    }
 
     console.log(testUser)
 
