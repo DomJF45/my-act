@@ -81,7 +81,7 @@ const Breathing = () => {
   return (
     <>
       <div className='bottom'>
-        <h2>Welcome {user?.name}</h2>
+        <h2 style={showBreath || finish ? {display: 'none'} : {display: 'block'}}>Welcome {user?.name ? user?.name : 'Guest'}</h2>
         <div>
           { 
             finish && (
@@ -118,22 +118,29 @@ const Breathing = () => {
         <Card
           style={showBreath || finish ? {display: 'none'} : {
             display: 'block',
-            width: '60%',
             textAlign: 'start'
           }}
-        
+          id='pref-card'
         >
           <Card.Body>
             <div id="pref-container" className='container ' style={showBreath || finish ? {display: 'none'} : {display: 'block'}}>
               <h3>Set your preferences!</h3>
               <Form id='start-form' onSubmit={startExercise}>
-                <Form.Group>
-                  <Form.Label>Breath Speed</Form.Label>
-                  <Form.Control ref={speedRef} defaultValue={speed} id='num-form' className='w-65' type='number' size={15} max={15} min={1} />
-                  <Form.Control.Feedback type='invalid'>
-                    No values less than 1 or larger than 15
-                  </Form.Control.Feedback>
-                </Form.Group>
+                <div
+                  style={{
+                    width: '30%'
+                  }}
+                >
+
+                
+                  <Form.Group>
+                    <Form.Label>Breath Speed</Form.Label>
+                    <Form.Control ref={speedRef} defaultValue={speed} id='num-form' className='w-65' type='number' size={15} max={15} min={1}/>
+                    <Form.Control.Feedback type='invalid'>
+                      No values less than 1 or larger than 15
+                    </Form.Control.Feedback>
+                  </Form.Group>
+                </div>
               </Form>
               <div className='btn-container justify-content-center' >
                 <Button type='submit' form='start-form'>Start Exercise!</Button>      

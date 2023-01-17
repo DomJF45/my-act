@@ -30,9 +30,22 @@
 
 }
 
-#value-column {
-
+#value-column::-webkit-scrollbar {
+  width: 8px
 }
+
+/* Track */
+#value-column::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+#value-column::-webkit-scrollbar-thumb {
+  background: #7a18fa;
+  border-radius: 10px;
+}
+
 
 #value-column::-webkit-scrollbar-track {
   display: none;
@@ -47,6 +60,9 @@
   align-items: center;
 }
 
+#saveBtn {
+  width: 20%;
+}
 
 
 @media screen and (max-width: 1030px) {
@@ -76,5 +92,8 @@
   }
   .inner-card-1 > p {
     margin-top: .5rem;
+  }
+  #saveBtn {
+    width: 100%;
   }
 }

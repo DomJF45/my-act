@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router'
 import GoBack from '../util/directory/GoBack'
+import '../../styles/Card.css'
+import NavbarHandler from '../navbar/NavbarHandler';
 
 const exerciseInfo = [
   {
@@ -41,19 +43,22 @@ const AllExercises = () => {
 
   return (
     <>
-      <div className='container'>
-        <GoBack page={-1} />
-        <div className='animate-fade-up'>
-          <div className='link-container'>
-            {
-              exerciseInfo.map((ex) => {
-                return (
-                  <a className='card-box' onClick={() => navigate(ex.link)}>
-                    <p>{ex.name}</p>
-                  </a>
-                )
-              })
-            }
+      <div className="dashboard-container">
+        <NavbarHandler />
+        <div className='container'>
+          <GoBack page={-1} />
+          <div className='animate-fade-up'>
+            <div className='link-container'>
+              {
+                exerciseInfo.map((ex) => {
+                  return (
+                    <a className='card-box' onClick={() => navigate(ex.link)}>
+                      <p>{ex.name}</p>
+                    </a>
+                  )
+                })
+              }
+            </div>
           </div>
         </div>
       </div>

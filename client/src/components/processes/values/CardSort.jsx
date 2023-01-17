@@ -7,6 +7,7 @@ import GoBack from '../../util/directory/GoBack';
 import '../../../styles/processes/Values.css';
 import { Button } from 'react-bootstrap';
 import Done from '../../util/directory/Done';
+import '../../../styles/processes/Values.css'
 
 const columnsFromBackend = {
   ['unsorted']: {
@@ -182,10 +183,9 @@ const CardSort = () => {
           marginBottom: '2rem'
         }}
       >
-        <Button onClick={saveResults} style={{
+        <Button id='saveBtn' onClick={saveResults} style={{
           backgroundColor: '#7a18fa',
           border: '1px #7a18fa',
-          width: '100%',
           marginTop: '1rem'
         }}>Save</Button>
       </div>

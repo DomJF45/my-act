@@ -4,7 +4,9 @@ import {
   createBrowserRouter, 
   RouterProvider,
   useNavigate,
-  Route 
+  BrowserRouter as Router,
+  Routes,
+  Route
 } from 'react-router-dom'
 import { Landing } from './components/landing/Landing';
 import About from './components/about/About';
@@ -33,6 +35,7 @@ import Survey from './components/processes/acceptance/Survey';
 import ExercisesCard from './components/dashboard/cards/ExercisesCard';
 import AllExercises from './components/processes/AllExercises';
 import Footer from './components/footer/Footer';
+import Sidebar from './components/navbar/Sidebar'
 
 const fakeUserData = {
   id: '123',
@@ -69,6 +72,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   const router = createBrowserRouter([
+    
     {
       path: "/",
       element: <Landing />
@@ -167,8 +171,33 @@ function App() {
 
       </UserContext.Provider> */}
       <UserContextProvider>
-        <FullNavbar user={ user ? true : false} />
-        <RouterProvider router={router} />
+        {/* <FullNavbar user={ user ? true : false} /> */}
+        {/* <RouterProvider router={router} /> */}
+        <Router>
+          
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/services' element={<Services />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/processes' element={<Processes />} />
+            <Route path='/processes/present' element={<Present />} />
+            <Route path='/processes/present/breathing' element={<Breathing />} />
+            <Route path='/processes/values' element={<Values />} />
+            <Route path='/processes/values/card-sort' element={<CardSort />} />
+            <Route path='/processes/commitment' element={<Commitment />} />
+            <Route path='/processes/commitment/goal-setting' element={<GoalSetting />} />
+            <Route path='/processes/self' element={<Self />} />
+            <Route path='/processes/the-observing-self' element={<ObservingSelf />} />
+            <Route path='/processes/defusion' element={<Defusion />} />
+            <Route path='/processes/defusion/label-thoughts' element={<LabelThoughts />} />
+            <Route path='/processes/acceptance' element={<Acceptance />} />
+            <Route path='/processes/acceptance/acceptance-survey' element={<Survey />} />
+            <Route path='/dashboard/exercises' element={<AllExercises />} />
+          </Routes>
+        </Router>
         <ToastContainer />
       </UserContextProvider>
      

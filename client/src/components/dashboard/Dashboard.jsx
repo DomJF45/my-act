@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { useNavigate } from 'react-router'
 import Logo from '../landing/Logo'
@@ -10,6 +10,9 @@ import SettingsCard from './cards/SettingsCard'
 import ExercisesCard from './cards/ExercisesCard'
 import { useContext } from 'react'
 import { UserContext } from '../../App'
+import Sidebar from '../navbar/Sidebar'
+import NavbarHandler from '../navbar/NavbarHandler'
+import DataContainer from './cards/data/DataContainer'
 
 const Dashboard = () => {
 
@@ -38,18 +41,28 @@ const Dashboard = () => {
 
   return (
     <>
-      <Container>
+      {/* <Container>
         <h1>Dashboard</h1>
-      </Container>
-      <Container>
-        <div className='animate-fade-up'>
-          <div className="link-container">
-            <ProcessesCard />
-            <EventCard />
-            <ExercisesCard />
+      </Container> */}
+        <div className='dashboard-container'>
+          
+          <NavbarHandler />
+          <div className="container" style={{
+            
+          }}>
+
+          <div className='animate-fade-up'>
+            {/* <div className="link-container">
+              <ProcessesCard />
+              <ExercisesCard />
+            </div> */}
+            <div className="container mt-5">
+              <h1>Welcome to MyAct!</h1>
+              <DataContainer />
+            </div>
+          </div>
           </div>
         </div>
-      </Container>
     </>
   )
 }

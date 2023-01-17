@@ -33,7 +33,10 @@ export const Landing = () => {
             </div>
             
             <div className='btn-container'>
-              <Button className='mt-5' style={{width: "100%"}} onClick={() => navigate("/register")}>Sign Up!</Button>
+              <Button className='me-1' style={{width: "100%"}} onClick={() => navigate("/register")}>Sign Up!</Button>
+              <Button className='ms-1' style={{width: '100%'}}
+                onClick={() => navigate("/dashboard")}
+              >Continue as a Guest!</Button>
             </div>
           </div>
         </div>
