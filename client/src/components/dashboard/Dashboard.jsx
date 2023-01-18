@@ -59,7 +59,7 @@ const Dashboard = () => {
             <div className="container mt-5">
               <div style={{display: 'flex'}}>
 
-                <h1>Welcome to My</h1><h1 style={{color: '#9747FF'}}>ACT</h1>
+                <p className='lead' style={{fontSize: '3rem'}}>Welcome to My</p><p className='lead' style={{color: '#9747FF', fontSize: '3rem'}}>ACT</p>
               </div>
               <DataContainer />
             </div>
