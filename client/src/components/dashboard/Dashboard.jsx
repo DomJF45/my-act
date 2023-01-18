@@ -57,7 +57,10 @@ const Dashboard = () => {
               <ExercisesCard />
             </div> */}
             <div className="container mt-5">
-              <h1>Welcome to MyAct!</h1>
+              <div style={{display: 'flex'}}>
+
+                <h1>Welcome to My</h1><h1 style={{color: '#9747FF'}}>ACT</h1>
+              </div>
               <DataContainer />
             </div>
           </div>

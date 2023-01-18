@@ -1,0 +1,62 @@
+.parent-data-container {
+  display: flex;
+}
+
+.data-container {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
+  height: 35vh;
+  margin-left: 2rem;
+}
+.data-container-alt {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
+  height: 35vh;
+  margin-left: 2rem;
+  display: block;
+}
+.l-data-container {
+  width: 45%;
+  background-color: rgb(235, 235, 235);
+  margin-top: 3rem;
+  border-radius: 20px;
+  height: 72vh;
+}
+.data-card {
+  width: 70%;
+  height: 50%;
+  background-color: #f2e8ff;
+  border: 3px solid #9747FF;
+  position: relative;
+  display: flex;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center;
+}
+.data-card-icon {
+  padding: 1rem;
+}
+.data-card-text {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: end;
+  color: #9747FF;
+}
+
+.data-card-text p {
+  margin-right: 1rem;
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.data-card-text h5 {
+  margin-right: 1rem;
+  font-size: small;
+}
