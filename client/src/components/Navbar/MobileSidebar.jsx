@@ -32,7 +32,7 @@ const MobileSidebar = () => {
           <div id='my-sidebar' className='m-sidebar' style={sidebar ? {opacity: 1, width: '200px', height: '300px'} : {opacity: 0, width: 0, height: 0}}>
             <a onClick={() => handleNavigate('/dashboard')}>Dashboard</a>
             <a onClick={() => handleNavigate('/processes')}>Processes</a>
-            <a onClick={() => handleNavigate('/dashboard/exercises')}> Exercises</a>
+            <a onClick={() => handleNavigate('/exercises')}> Exercises</a>
           </div>
         </div>
       </div>

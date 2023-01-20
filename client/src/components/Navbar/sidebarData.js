@@ -20,7 +20,7 @@ export const SidebarData = [
   },
   {
     title: 'Exercises',
-    path:'/dashboard/exercises',
+    path:'/exercises',
     icon: <GiIcons.GiLotus size={30} />,
     cName: 'nav-text'
   }

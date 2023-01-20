@@ -1,14 +1,10 @@
-import React from 'react'
-import { 
-  AiOutlineHourglass
-} from 'react-icons/ai';
-
-import {BsBook} from 'react-icons/bs'
-import {FaRegHandshake} from 'react-icons/fa'
-import {MdSelfImprovement} from 'react-icons/md'
-import {RiTreasureMapLine} from 'react-icons/ri'
-import {FaRegSmile} from 'react-icons/fa'
-
+import React from 'react';
+import { AiOutlineHourglass } from 'react-icons/ai';
+import { BsBook } from 'react-icons/bs';
+import { FaRegHandshake } from 'react-icons/fa';
+import { MdSelfImprovement } from 'react-icons/md';
+import { RiTreasureMapLine } from 'react-icons/ri';
+import { FaRegSmile } from 'react-icons/fa';
 
 export const processData = [
   {

@@ -16,9 +16,7 @@ const DataContainer = () => {
           <CoreProcessRadar data={testData} />
         </div>
         <div
-          style={{
-            width: '50%'
-          }}
+          className='child-data-container'
         >
           <div className="data-container">
             <Streak data={testData.userTimeData.streak} />

@@ -195,7 +195,7 @@ function App() {
             <Route path='/processes/defusion/label-thoughts' element={<LabelThoughts />} />
             <Route path='/processes/acceptance' element={<Acceptance />} />
             <Route path='/processes/acceptance/acceptance-survey' element={<Survey />} />
-            <Route path='/dashboard/exercises' element={<AllExercises />} />
+            <Route path='/exercises' element={<AllExercises />} />
           </Routes>
         </Router>
         <ToastContainer />

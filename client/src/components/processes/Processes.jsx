@@ -16,7 +16,7 @@ const Processes = () => {
 
   return (
     <>
-      <IconContext.Provider value={{color: '#fff'}}>
+      <IconContext.Provider value={{color: '#9747FF'}}>
         <div className='dashboard-container'>
           <NavbarHandler />
           <div className="container"
@@ -34,8 +34,8 @@ const Processes = () => {
                   <div
                     style={{
                       position: 'absolute',
-                      bottom: 0,
-                      right: 0
+                      bottom: '15px',
+                      right: '15px'
                     }}
                   >
                     {process.processImg}

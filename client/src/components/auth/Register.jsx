@@ -25,7 +25,7 @@ const Register = ({ setUser }) => {
   const navigate = useNavigate();
 
   const initUser = async(userData) => {
-
+    
   }
 
   const handleSubmit = async (e) => {
@@ -62,8 +62,6 @@ const Register = ({ setUser }) => {
         console.log(err)
       }
      
-
-  
       console.log(userData);
     }
 
@@ -106,7 +104,6 @@ const Register = ({ setUser }) => {
           </Card.Footer>
         </Card>
       </div>
-      
     </>
   )
 }
