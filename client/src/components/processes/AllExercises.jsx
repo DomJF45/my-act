@@ -8,32 +8,32 @@ const exerciseInfo = [
   {
     name: 'Breathing',
     process: 'present',
-    link: '/dashboard/processes/present/breathing'
+    link: '/processes/present/breathing'
   },
   {
     name: 'Card Sort',
     process: 'values',
-    link: '/dashboard/processes/values/card-sort'
+    link: '/processes/values/card-sort'
   },
   {
     name: 'Goal Setting',
     process: 'commiment',
-    link: '/dashboard/processes/commitment/goal-setting'
+    link: '/processes/commitment/goal-setting'
   },
   {
     name: 'The Observing Self',
     process: 'self',
-    link: '/dashboard/processes/self/the-observing-self'
+    link: '/processes/self/the-observing-self'
   },
   {
     name: 'Label Thoughts',
     process: 'defusion',
-    link: '/dashboard/processes/defusion/label-thoughts'
+    link: '/processes/defusion/label-thoughts'
   },
   {
     name: 'Acceptance Survey',
     process: 'acceptance',
-    link: '/dashboard/processes/acceptance/acceptance-survey'
+    link: '/processes/acceptance/acceptance-survey'
   }
 ]
 

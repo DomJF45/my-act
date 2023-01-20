@@ -190,7 +190,7 @@ function App() {
             <Route path='/processes/commitment' element={<Commitment />} />
             <Route path='/processes/commitment/goal-setting' element={<GoalSetting />} />
             <Route path='/processes/self' element={<Self />} />
-            <Route path='/processes/the-observing-self' element={<ObservingSelf />} />
+            <Route path='/processes/self/the-observing-self' element={<ObservingSelf />} />
             <Route path='/processes/defusion' element={<Defusion />} />
             <Route path='/processes/defusion/label-thoughts' element={<LabelThoughts />} />
             <Route path='/processes/acceptance' element={<Acceptance />} />

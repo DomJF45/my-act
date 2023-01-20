@@ -1,17 +1,17 @@
 export const testData = {
   userName: 'John',
   value_score: [
-    {'process': 'Present', 'user': 98, 'fullMark': 150},
-    {'process': 'Values', 'user': 98, 'fullMark': 150},
-    {'process': 'Committment', 'user': 65, 'fullMark': 150},
-    {'process': 'Self', 'user': 99, 'fullMark': 150},
-    {'process': 'Defusion', 'user': 85, 'fullMark': 150},
-    {'process': 'Acceptance', 'user': 65, 'fullMark': 150}
+    {'process': 'Present', 'user': 0, 'fullMark': 150},
+    {'process': 'Values', 'user': 0, 'fullMark': 150},
+    {'process': 'Committment', 'user': 0, 'fullMark': 150},
+    {'process': 'Self', 'user': 0, 'fullMark': 150},
+    {'process': 'Defusion', 'user': 0, 'fullMark': 150},
+    {'process': 'Acceptance', 'user': 0, 'fullMark': 150}
   ],
   userTimeData: {
-    totalHours: 40,
-    daysAccessed: 68,
-    streak: 3
+    totalHours: 0,
+    daysAccessed: 0,
+    streak: 0
   },
   exerciseData: [
     {'exercise': 'Breathing', 'completed': 50, 'incompleted': 10},

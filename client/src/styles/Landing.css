@@ -9,7 +9,7 @@
 
 .main-grid {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 55% 45%;
 }
 
 .main-grid-alt {
@@ -27,13 +27,28 @@
 }
 
 .header-text {
-  align-items: center;
   opacity: 0;
-  margin-top: 13rem;
+  margin-top: 2rem;
   font-size: 1.3rem;
   animation: FadeIn 1s forwards;
   animation-delay: .5s;
   float: right;
+}
+.header-text-container > p {
+  font-size: 2.5rem;
+}
+
+.header-text-container > span {
+  margin: 0 !important;
+  padding: 0;
+}
+
+.header-text-container > span:hover {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  padding-block: 0 !important;
+  padding-inline: 0 !important;
 }
 
 .btn-container {

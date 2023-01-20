@@ -56,10 +56,20 @@ const Dashboard = () => {
               <ProcessesCard />
               <ExercisesCard />
             </div> */}
-            <div className="container mt-5">
-              <div style={{display: 'flex'}}>
+            <div className="container mt-4">
+              <div style={{display: 'flex', width: '100%'}}>
 
                 <p className='lead' style={{fontSize: '3rem'}}>Welcome to My</p><p className='lead' style={{color: '#9747FF', fontSize: '3rem'}}>ACT</p>
+                <div 
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    alignItems: 'center',
+                    width: '65%'
+                  }}
+                >
+                  <p style={{float: 'right'}}>Logged in as </p>
+                </div>
               </div>
               <DataContainer />
             </div>

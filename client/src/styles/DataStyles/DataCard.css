@@ -3,7 +3,7 @@
 }
 
 .data-container {
-  margin-top: 3rem;
+  margin-top: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
@@ -24,7 +24,7 @@
 .l-data-container {
   width: 45%;
   background-color: rgb(235, 235, 235);
-  margin-top: 3rem;
+  margin-top: 0;
   border-radius: 20px;
   height: 72vh;
 }
@@ -38,7 +38,16 @@
   border-radius: 10px;
   align-self: center;
   justify-self: center;
+  transition: .3s ease-in-out;
 }
+
+.data-card:hover {
+  width: 70%;
+  height: 50%;
+  transform: translateY(-13px);
+  transition: .3s ease-in-out;
+}
+
 .data-card-icon {
   padding: 1rem;
 }

@@ -21,15 +21,25 @@ export const Landing = () => {
       <div className="main-wrapper">
         <div className='main-grid'>
           <div className='header'>
-            <h1>MyAct</h1>
+            <h1
+              style={{
+                fontSize: '6rem'
+              }}
+            >MyAct</h1>
             <div className='pic-container'>
               <object className='pic-content' data={therapyHumaaans} type='image/svg+xml' />
             </div>
             <div className='div-divider' />
           </div>
           <div className="header-text">
-            <div>
-              <p>Conduct Acceptance and Committment Therapy exercises from the comfort of your own home!</p>
+            <div
+              style={{
+                display: 'flex',
+                height: '50vh'
+              }}
+              className='header-text-container'
+            >
+              <p>Conduct<span style={{color: '#9747FF'}}>Acceptance</span> and<span style={{color: '#9747FF'}}>Committment</span> Therapy exercises from the comfort of your own home!</p>
             </div>
             
             <div className='btn-container'>
