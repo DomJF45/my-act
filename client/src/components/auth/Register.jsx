@@ -9,7 +9,6 @@ import { Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import { UserContext } from '../../App';
 import axios from 'axios';
-import { PrismaClient } from '@prisma/client';
 
 const API_URL = '/api/users/register';
 
