@@ -19,7 +19,7 @@ const Defusion = () => {
         </div>
         <div className='content'>
           <h3>All about Defusion:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Cognitive defusion involves framing undesirable thoughts through a different perspective. Rather than try to alter the form, frequency, or sensitivity, frame the thought through a different perspective such as viewing the thought as a scientist or by giving the thoughts colors, sizes, etc. By perceiving negative thoughts through a different “lens”, the individual can then “detach” themselves from negative thoughts and view it objectively without emotions.</p>
         </div>
       </div>
       <GoToExercise page='label-thoughts' />

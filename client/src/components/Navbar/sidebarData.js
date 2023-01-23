@@ -7,21 +7,24 @@ import * as BiIcons from 'react-icons/bi';
 
 export const SidebarData = [
   {
-    title: 'Home',
+    title: 'Dashboard',
     path: '/dashboard',
     icon: <AiIcons.AiFillHome size={30} />,
-    cName: 'nav-text'
+    cName: 'nav-text',
+    header: 'View Your Progress'
   },
   {
     title: 'Processes',
     path:'/processes',
     icon: <BiIcons.BiBrain size={30} />,
-    cName: 'nav-text'
+    cName: 'nav-text',
+    header: 'Learn'
   },
   {
     title: 'Exercises',
     path:'/exercises',
     icon: <GiIcons.GiLotus size={30} />,
-    cName: 'nav-text'
+    cName: 'nav-text',
+    header: 'Engage'
   }
 ]

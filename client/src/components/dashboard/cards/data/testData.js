@@ -1,12 +1,12 @@
 export const testData = {
   userName: 'John',
   value_score: [
-    {'process': 'Present', 'user': 0, 'fullMark': 150},
-    {'process': 'Values', 'user': 0, 'fullMark': 150},
-    {'process': 'Committment', 'user': 0, 'fullMark': 150},
-    {'process': 'Self', 'user': 0, 'fullMark': 150},
-    {'process': 'Defusion', 'user': 0, 'fullMark': 150},
-    {'process': 'Acceptance', 'user': 0, 'fullMark': 150}
+    {'process': 'Present', 'user': 100, 'fullMark': 150},
+    {'process': 'Values', 'user': 80, 'fullMark': 150},
+    {'process': 'Committment', 'user': 67, 'fullMark': 150},
+    {'process': 'Self', 'user': 120, 'fullMark': 150},
+    {'process': 'Defusion', 'user': 95, 'fullMark': 150},
+    {'process': 'Acceptance', 'user': 70, 'fullMark': 150}
   ],
   userTimeData: {
     totalHours: 0,

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
 import MobileSidebar from './MobileSidebar'
 import useScreenSize from '../util/hooks/useScreenSize';
+import MobileNav from './MobileNav';
 
 const NavbarHandler = () => {
 
@@ -9,7 +10,7 @@ const NavbarHandler = () => {
 
   if (windowSize.width < 1030) {
     return (
-      <MobileSidebar />
+      <MobileNav />
     )
   } else {
     return <Sidebar />

@@ -48,6 +48,17 @@
   border-radius: 4px;
 }
 
+.m-nav-text a {
+  text-decoration: none;
+  color: #303030;
+}
+.m-nav-header {
+  font-size: 1.6rem;
+}
+.m-nav-sub {
+  color: #333333;
+  font-weight: 300;
+}
 .nav-text a:hover {
   
 }

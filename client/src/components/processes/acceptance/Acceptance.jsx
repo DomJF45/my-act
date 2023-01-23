@@ -18,7 +18,7 @@ const Acceptance = () => {
         </div>
         <div className='content' style={{marginTop: '3rem'}}>
           <h3>All about Acceptance:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Acceptance is an individual's willingness to understand that negative events have happened and to be aware and embrace them. In essence, an individual will open themselves up to negative emotions and accept that they are present, rather than pushing them away. This allows individuals to accept negative emotions as thoughts so they can move past them easily.</p>
         </div>
         <GoToExercise page="acceptance-survey" />
       </div>

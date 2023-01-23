@@ -18,7 +18,7 @@ const Commitment = () => {
         </div>
         <div className='content'>
           <h3>All about Commitment:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Commitment within the ACT framework is comprised of all core components and is the culmination of an individuals work within ACT. Commitment is a stage where an individual commits to actions that help them facilitate their experience and embrace change. An individual will actively engage in moving towards what they care about despite the presence of obstacles. </p>
         </div>
         <GoToExercise page='goal-setting' />
       </div>

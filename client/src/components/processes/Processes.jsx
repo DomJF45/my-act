@@ -9,10 +9,12 @@ import GoBack from '../util/directory/GoBack'
 import Sidebar from '../navbar/Sidebar'
 import NavbarHandler from '../navbar/NavbarHandler'
 import { IconContext } from 'react-icons'
+import useScreenSize from '../util/hooks/useScreenSize'
 
 const Processes = () => {
 
   const navigate = useNavigate();
+  const window = useScreenSize();
 
   return (
     <>
@@ -25,6 +27,8 @@ const Processes = () => {
 
           <GoBack page={-1} />
           <div className='animate-fade-up'>
+            <h1>Process Hub</h1>
+            <p>Each of these cards will direct you to more information about their process, along with an interactive exercise!</p>
             <div className="link-container" style={{
               position: 'relative'
             }}>
@@ -38,7 +42,7 @@ const Processes = () => {
                       right: '15px'
                     }}
                   >
-                    {process.processImg}
+                    { window.width > 1030 ? process.processImg : process.processImgSmall }
                   </div>
                 </a>
               ))}

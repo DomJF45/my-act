@@ -110,4 +110,9 @@
   .data-card-text h5 {
     margin-right: 10px;
   }
+  .data-card:hover {
+    height: 130px;
+    width: 130px;
+    transform: none;
+  }
 }

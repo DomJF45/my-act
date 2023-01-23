@@ -37,6 +37,13 @@
 }
 
 @media screen and (max-width: 1030px) {
-  
+  .card-box {
+    margin: 0;
+    height: 150px;
+    width: 150px;
+  }
+  .card-box p {
+    font-size: large;
+  }
 }
 

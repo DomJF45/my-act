@@ -18,7 +18,7 @@ const Self = () => {
         </div>
         <div className='content'>
           <h3>All about the Self:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Self in ACT is defined as a perspective for one to be aware of one’s own “flow” while the concept of responsibility or attachment is observed contextually and without judgment / emotion. The concept of self is meant to be rigid and through a plethora of emotions, nothing can change the self. It is often used in metaphors as a comparison to the sky; even when there are clouds and storms, the sky will always be there. The self is no different.</p>
         </div>
         <GoToExercise page={'the-observing-self'} />
       </div>

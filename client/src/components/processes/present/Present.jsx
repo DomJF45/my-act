@@ -21,7 +21,8 @@ const Present = () => {
         </div>
         <div className='content mt-3'>
           <h3>All about the Present:</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Being present in ACT promotes non-judgemental and continuous interactions with psychological and environmental events as they occur. Being present is the process of becoming attuned to what is occurring in the present moment. The goal is to experience the world directly, and objectively, so that behavior can be flexible and thus actions are consistent with personal values.</p>
+          <p>Mindfulness and Presentness exercises usually promote a meditative-like state where one notices the small things around oneself such as sights, smells, sounds, and sensations. After this mindfulness of the present moment has been achieved, the person can then view memories and thoughts as objective instances of the mind, whereas normally a person might feel responsible for their thoughts of the past and the future. </p>
         </div>
         <GoToExercise page='breathing' />
       </div>
