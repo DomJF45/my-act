@@ -3,6 +3,7 @@ import Sidebar from './Sidebar'
 import MobileSidebar from './MobileSidebar'
 import useScreenSize from '../util/hooks/useScreenSize';
 import MobileNav from './MobileNav';
+import TopContainer from './TopContainer';
 
 const NavbarHandler = () => {
 
@@ -13,7 +14,7 @@ const NavbarHandler = () => {
       <MobileNav />
     )
   } else {
-    return <Sidebar />
+    return <TopContainer  />
   }
 }
 

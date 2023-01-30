@@ -1,18 +1,23 @@
-.footer-container {
-  margin-top: 3rem;
-  background-color: #303030;
+.footer-container {  
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-.footer-text {
-  margin-top: 3rem;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  font-size: 2rem;
+  font-size: 1.2rem;
+}
+
+#dark .footer-container {
+  color: '#fff';
+  transition: .3s ease;
+  background-color: #303030;
+}
+
+#light .footer-container {
+  color: '#303030';
+  transition: .3s ease;
 }
 
 .icons {

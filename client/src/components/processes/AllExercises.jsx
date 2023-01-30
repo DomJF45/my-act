@@ -11,9 +11,11 @@ import { MdSelfImprovement } from 'react-icons/md';
 import { RiTreasureMapLine } from 'react-icons/ri';
 import { FaRegSmile } from 'react-icons/fa';
 import useScreenSize from '../util/hooks/useScreenSize';
+import useColorTheme from '../util/hooks/uesColorTheme';
+import Exercise from './Exercise';
 
 const bigIcon = 100;
-const smallIcon = 50;
+const smallIcon = 80;
 
 const exerciseInfo = [
   {
@@ -62,39 +64,24 @@ const exerciseInfo = [
 
 const AllExercises = () => {
 
-  const navigate = useNavigate();
-  const window = useScreenSize();
 
   return (
     <>
-      <div className="dashboard-container">
-        <NavbarHandler />
-        <div className='container'>
-          <GoBack page={-1} />
+      
+        <div className='container' style={{ height: '100%', marginTop: '50px'}}>
           <div className='animate-fade-up'>
             <div className='link-container'>
               {
-                exerciseInfo.map((ex) => {
+                exerciseInfo.map((ex, index) => {
                   return (
-                    <a className='card-box' onClick={() => navigate(ex.link)}>
-                      <p>{ex.name}</p>
-                      <div
-                        style={{
-                          position: 'absolute',
-                          bottom: '15px',
-                          right: '15px'
-                        }}
-                      >
-                        { window.width > 1030 ? ex.icon : ex.iconSmall}
-                      </div>
-                    </a>
+                    <Exercise exercise={ex} key={index} />
                   )
                 })
               }
             </div>
           </div>
         </div>
-      </div>
+      
     </>
   )
 }

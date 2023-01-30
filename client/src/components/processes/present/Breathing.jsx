@@ -79,7 +79,9 @@ const Breathing = () => {
   }
 
   return (
-    <>
+    <div style={{
+      height: '90vh'
+    }}>
       <div className='bottom'>
         <h2 style={showBreath || finish ? {display: 'none'} : {display: 'block'}}>Welcome {user?.name ? user?.name : 'Guest'}</h2>
         <div>
@@ -107,49 +109,52 @@ const Breathing = () => {
         </div>
         
       </div>
-      <motion.div 
-        className='container d-flex justify-content-center'
-        initial={{x: 100, opacity: 0}}
-        animate={{x: 0, opacity: 1}}
-        transition={{duration: .5, }}
-        style={showBreath || finish ? {display: 'none'} : {display: 'block'}}
-      >
-        
-        <Card
-          style={showBreath || finish ? {display: 'none'} : {
-            display: 'block',
-            textAlign: 'start'
-          }}
-          id='pref-card'
-        >
-          <Card.Body>
-            <div id="pref-container" className='container ' style={showBreath || finish ? {display: 'none'} : {display: 'block'}}>
-              <h3>Set your preferences!</h3>
-              <Form id='start-form' onSubmit={startExercise}>
-                <div
-                  style={{
-                    width: '30%'
-                  }}
-                >
+      <div style={{height: '80%'}}>
 
-                
-                  <Form.Group>
-                    <Form.Label>Breath Speed</Form.Label>
-                    <Form.Control ref={speedRef} defaultValue={speed} id='num-form' className='w-65' type='number' size={15} max={15} min={1}/>
-                    <Form.Control.Feedback type='invalid'>
-                      No values less than 1 or larger than 15
-                    </Form.Control.Feedback>
-                  </Form.Group>
+        <motion.div 
+          className='container d-flex justify-content-center'
+          initial={{x: 100, opacity: 0}}
+          animate={{x: 0, opacity: 1}}
+          transition={{duration: .5, }}
+          style={showBreath || finish ? {display: 'none'} : {display: 'block'}}
+        >
+          
+          <Card
+            style={showBreath || finish ? {display: 'none'} : {
+              display: 'block',
+              textAlign: 'start'
+            }}
+            id='pref-card'
+          >
+            <Card.Body>
+              <div id="pref-container" className='container ' style={showBreath || finish ? {display: 'none'} : {display: 'block'}}>
+                <h3>Set your preferences!</h3>
+                <Form id='start-form' onSubmit={startExercise}>
+                  <div
+                    style={{
+                      width: '30%'
+                    }}
+                  >
+
+                  
+                    <Form.Group>
+                      <Form.Label>Breath Speed</Form.Label>
+                      <Form.Control ref={speedRef} defaultValue={speed} id='num-form' className='w-65' type='number' size={15} max={15} min={1}/>
+                      <Form.Control.Feedback type='invalid'>
+                        No values less than 1 or larger than 15
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  </div>
+                </Form>
+                <div className='btn-container justify-content-center' >
+                  <Button type='submit' form='start-form'>Start Exercise!</Button>      
                 </div>
-              </Form>
-              <div className='btn-container justify-content-center' >
-                <Button type='submit' form='start-form'>Start Exercise!</Button>      
               </div>
-            </div>
-          </Card.Body>
-        </Card>
-      </motion.div>
-    </>
+            </Card.Body>
+          </Card>
+        </motion.div>
+      </div>
+    </div>
   )
 }
 

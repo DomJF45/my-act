@@ -3,3 +3,46 @@
   top: 0;
   z-index: 3;
 }
+
+.n-icon {
+  
+  transition: .2s ease;
+}
+
+#light .n-icon {
+  color: rgb(205, 205, 205);
+}
+#dark .n-icon {
+  color: #fff;
+}
+.n-icon:hover {
+  color: #9747FF;
+  transition: .2s ease;
+}
+
+.right-link {
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+
+
+.right-link:hover {
+  color: #9747FF;
+  transition: .2s ease;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  background-color: #fff;
+  grid-template-columns: repeat();
+}
+
+.dropdownHide {
+  display: none;
+}

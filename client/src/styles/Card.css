@@ -1,23 +1,43 @@
 .card-box {
-  padding: 2.4rem 1.6rem, 3rem;
-  border-radius: 22px;
-  border: 3px solid #9747FF;
+  /* padding: 2.4rem 1.6rem, 3rem; */
+  border-radius: 5px;
   box-shadow: 0 20px 40px -16px rgb(0 0 0 / 40%);
   /* background: linear-gradient(-5deg,#479aa5,#5473cb 60%,#3e509d); */
-  background: #f2e8ff;
-  height: 15rem;
+  justify-content: space-evenly;
+  height: 400px;
   position: relative;
   transition: .2s ease;
   text-decoration: none;
-  color: #9747FF;
-  width: 20rem;
-  justify-self: center;
+  width: 600px;
+  
+  margin-bottom: 3rem;
 }
-.card-box:hover {
+
+#dark .card-box {
+  border: 1px solid rgb(242, 242, 242);
+  color:rgb(242, 242, 242);
+  box-shadow: 4px 4px 0px 0px #9747FF;
+  background: #1d1a22;
+}
+
+#light .card-box {
+  border: 1px solid #303030;
+  color: #303030;
+  box-shadow: 4px 4px 0px 0px #dac0fc;
+  background: rgb(235, 235, 235);
+}
+
+#light .card-box:hover {
   cursor: pointer;
   transform: translateY(-2px) scale(1.01);
+  box-shadow: 0px 0px 0px 0px #dac0fc;
   transition: .2s ease;
-  color: #9747FF;
+}
+#dark .card-box:hover {
+  cursor: pointer;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0px 0px 0px 0px #dac0fc;
+  transition: .2s ease;
 }
 .card-box p {
   margin: 1rem 2rem;
@@ -39,8 +59,10 @@
 @media screen and (max-width: 1030px) {
   .card-box {
     margin: 0;
-    height: 150px;
-    width: 150px;
+    display: flex;
+    width: 95%;
+    height: 300px;
+    margin-bottom: 2rem;
   }
   .card-box p {
     font-size: large;

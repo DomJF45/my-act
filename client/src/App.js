@@ -6,8 +6,11 @@ import {
   useNavigate,
   BrowserRouter as Router,
   Routes,
-  Route
-} from 'react-router-dom'
+  Route,
+  Outlet
+} from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDarkTheme, setLightTheme } from './features/theme/themeSlice';
 import { Landing } from './components/landing/Landing';
 import About from './components/about/About';
 import Services from './components/services/Services';
@@ -35,13 +38,30 @@ import Survey from './components/processes/acceptance/Survey';
 import ExercisesCard from './components/dashboard/cards/ExercisesCard';
 import AllExercises from './components/processes/AllExercises';
 import Footer from './components/footer/Footer';
-import Sidebar from './components/navbar/Sidebar'
+import Sidebar from './components/navbar/Sidebar';
+import NavbarHandler from './components/navbar/NavbarHandler';
 
 const fakeUserData = {
   id: '123',
   name: 'john',
   email: 'john@mail.com',
   password: '123'
+}
+
+const LayOut = () => {
+
+  const dispatch = useDispatch();
+  const { mode } = useSelector((state) => state.theme);
+
+  return (
+    <>
+      <div className='app' id={mode}>
+        <NavbarHandler />
+          <Outlet />
+        <Footer />
+      </div>
+    </>
+  )
 }
 
 const UserContext = createContext();
@@ -75,91 +95,122 @@ function App() {
     
     {
       path: "/",
-      element: <Landing />
-    },
-    {
-      path: "/about",
-      element:  <About />
-    },
-    {
-      path: "/services",
-      element: <Services />
-    },
-    {
-      path: "/login",
-      element: <Login setUser={setUser} />
-    },
-    {
-      path: "/register",
-      element: <Register setUser={setUser} />
-    },
-    {
-      path: "/dashboard",
-      element: <Dashboard />
-    },
-    {
-      path: "/dashboard/processes",
-      element: <Processes />
-    },
-    {
-      path: "/dashboard/processes/present",
-      element: <Present />,
-    },
-    {
-      path: "/dashboard/processes/present/breathing",
-      element: <Breathing />
-    },
-    {
-      path: "/dashboard/processes/values",
-      element: <Values />
-    },
-    {
-      path: "/dashboard/processes/values/card-sort",
-      element: <CardSort />
-    },
-    {
-      path: "/dashboard/processes/commitment",
-      element: <Commitment />
-    },
-    {
-      path: "/dashboard/processes/commitment/goal-setting",
-      element: <GoalSetting />
-    },
-    {
-      path: "/dashboard/processes/self",
-      element: <Self />
-    },
-    {
-      path: "/dashboard/processes/self/the-observing-self",
-      element: <ObservingSelf />
-    },
-    {
-      path: "/dashboard/processes/defusion",
-      element: <Defusion />
-    },
-    {
-      path: '/dashboard/processes/defusion/label-thoughts',
-      element: <LabelThoughts />
-    },
-    {
-      path: "/dashboard/processes/acceptance",
-      element: <Acceptance />
-    },
-    {
-      path: '/dashboard/processes/acceptance/acceptance-survey',
-      element: <Survey />
-    },
-    {
-      path: "/dashboard/events",
-      element: <Events />
-    },
-    {
-      path: "/dashboard/user-info",
-      element: <UserInfo />
-    },
-    {
-      path: '/dashboard/exercises',
-      element: <AllExercises />
+      element: <LayOut />,
+      children: [
+        {
+          path: '/',
+          element: <Landing />
+        },
+        {
+          path: "/about",
+          element:  <About />
+        },
+        {
+          path: "/services",
+          element: <Services />
+        },
+        {
+          path: "/login",
+          element: <Login setUser={setUser} />
+        },
+        {
+          path: "/register",
+          element: <Register setUser={setUser} />
+        },
+        {
+          path: "/dashboard",
+          element: <Dashboard />
+        },
+        {
+          path: "/dashboard/processes",
+          element: <Processes />
+        },
+      
+      {
+        path: "/about",
+        element:  <About />
+      },
+      {
+        path: "/services",
+        element: <Services />
+      },
+      {
+        path: "/login",
+        element: <Login setUser={setUser} />
+      },
+      {
+        path: "/register",
+        element: <Register setUser={setUser} />
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />
+      },
+      {
+        path: "/processes",
+        element: <Processes />
+      },
+      {
+        path: "/processes/present",
+        element: <Present />,
+      },
+      {
+        path: "/processes/present/breathing",
+        element: <Breathing />
+      },
+      {
+        path: "/processes/values",
+        element: <Values />
+      },
+      {
+        path: "/processes/values/card-sort",
+        element: <CardSort />
+      },
+      {
+        path: "/processes/commitment",
+        element: <Commitment />
+      },
+      {
+        path: "/processes/commitment/goal-setting",
+        element: <GoalSetting />
+      },
+      {
+        path: "/processes/self",
+        element: <Self />
+      },
+      {
+        path: "/processes/self/the-observing-self",
+        element: <ObservingSelf />
+      },
+      {
+        path: "/processes/defusion",
+        element: <Defusion />
+      },
+      {
+        path: '/processes/defusion/label-thoughts',
+        element: <LabelThoughts />
+      },
+      {
+        path: "/processes/acceptance",
+        element: <Acceptance />
+      },
+      {
+        path: '/processes/acceptance/acceptance-survey',
+        element: <Survey />
+      },
+      {
+        path: "/events",
+        element: <Events />
+      },
+      {
+        path: "/user-info",
+        element: <UserInfo />
+      },
+      {
+        path: '/exercises',
+        element: <AllExercises />
+      }
+      ]
     }
   
   ])
@@ -171,9 +222,8 @@ function App() {
 
       </UserContext.Provider> */}
       <UserContextProvider>
-        {/* <FullNavbar user={ user ? true : false} /> */}
-        {/* <RouterProvider router={router} /> */}
-        <Router>
+        <RouterProvider router={router} />
+        {/* <Router>
           
           <Routes>
             <Route path="/" element={<Landing />} />
@@ -197,7 +247,7 @@ function App() {
             <Route path='/processes/acceptance/acceptance-survey' element={<Survey />} />
             <Route path='/exercises' element={<AllExercises />} />
           </Routes>
-        </Router>
+        </Router> */}
         <ToastContainer />
       </UserContextProvider>
      

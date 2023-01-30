@@ -54,6 +54,7 @@
 }
 .m-nav-header {
   font-size: 1.6rem;
+  font-weight: 400;
 }
 .m-nav-sub {
   color: #333333;
@@ -76,7 +77,7 @@
   align-items: center;
 }
 
-span {
+/* span {
   margin-left: 16px;
 }
 span:hover {
@@ -85,7 +86,7 @@ span:hover {
   border-radius: 10px;
   padding-block: .5rem;
   padding-inline: .5rem;
-}
+} */
 
 @media screen and (max-width: 1030px) {
   /* .nav-menu {

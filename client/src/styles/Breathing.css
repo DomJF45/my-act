@@ -4,15 +4,17 @@
   margin-right: auto;
   padding: 0;
   position: relative;
+  height: 80vh;
 }
 .st-cont {
   display: block;
 
 }
 .circle-container {
+  height: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 20%;
   position: relative;
 }
 
@@ -98,7 +100,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 17rem;
+  margin-inline: auto;
+  width: 100%;
+  height: 20%;
 }
 #pref-card {
   width: 30%;
@@ -111,5 +115,14 @@
   }
   #pref-container {
     width: 100% !important;
+  }
+  #pref-card {
+    width: 80%;
+  }
+  #num-form {
+    width: 100% !important;
+  }
+  .circle-container {
+    margin-top: 70%;
   }
 }

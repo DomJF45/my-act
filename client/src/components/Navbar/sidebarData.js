@@ -18,13 +18,77 @@ export const SidebarData = [
     path:'/processes',
     icon: <BiIcons.BiBrain size={30} />,
     cName: 'nav-text',
-    header: 'Learn'
+    header: 'Learn',
+    submenu: [
+      {
+        title: 'Present',
+        path: '/processes/present',
+
+      },
+      {
+        title: 'Values',
+        path: '/processes/values',
+
+      },
+      {
+        title: 'Commitment',
+        path: '/processes/commitment',
+
+      },
+      {
+        title: 'Self',
+        path: '/processes/self',
+
+      },
+      {
+        title: 'Defusion',
+        path: '/processes/defusion',
+
+      },
+      {
+        title: 'Acceptance',
+        path: '/processes/acceptance',
+
+      },
+    ]
   },
   {
     title: 'Exercises',
     path:'/exercises',
     icon: <GiIcons.GiLotus size={30} />,
     cName: 'nav-text',
-    header: 'Engage'
+    header: 'Engage',
+    submenu: [
+      {
+        title: 'Present',
+        exercise: 'Breathing',
+        path: '/processess/breathing'
+      },
+      {
+        title: 'Present',
+        exercise: 'Breathing',
+        path: '/processess/breathing'
+      },
+      {
+        title: 'Present',
+        exercise: 'Breathing',
+        path: '/processess/breathing'
+      },
+      {
+        title: 'Present',
+        exercise: 'Breathing',
+        path: '/processess/breathing'
+      },
+      {
+        title: 'Present',
+        exercise: 'Breathing',
+        path: '/processess/breathing'
+      },
+      {
+        title: 'Present',
+        exercise: 'Breathing',
+        path: '/processess/breathing'
+      },
+    ]
   }
 ]

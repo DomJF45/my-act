@@ -7,7 +7,6 @@ import GoBack from '../../util/directory/GoBack';
 import '../../../styles/processes/Values.css';
 import { Button } from 'react-bootstrap';
 import Done from '../../util/directory/Done';
-import '../../../styles/processes/Values.css'
 
 const columnsFromBackend = {
   ['unsorted']: {
@@ -96,12 +95,17 @@ const CardSort = () => {
   }
 
   return (
-    <div className='container mt-4'>
+    <>
+    
+    
+    <div className='container mt-2' style={{height: '80vh'}}>
     <div
       style={{
           display: 'flex',
           justifyContent: 'center',
-          height: '100%'
+          height: '50%',
+          position: 'relative',
+          width: '100%'
       }}
       id='card-containers'
     >
@@ -177,19 +181,23 @@ const CardSort = () => {
         })}
       </DragDropContext>
     </div>
+    </div>
       <div 
-        className='btn-container'
+        
         style={{
-          marginBottom: '2rem'
+          width: '40%',
+          marginInline: 'auto',
+          height: '5vh',
         }}
       >
         <Button id='saveBtn' onClick={saveResults} style={{
           backgroundColor: '#7a18fa',
           border: '1px #7a18fa',
-          marginTop: '1rem'
+          justifySelf: 'center'
         }}>Save</Button>
       </div>
-    </div>
+      <div style={{height: '20vh'}} />
+    </>
   )
 }
 

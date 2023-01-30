@@ -32,8 +32,8 @@
   height: 72vh;
 }
 .data-card {
-  width: 70%;
-  height: 50%;
+  width: 150px;
+  height: 150px;
   background-color: #f2e8ff;
   border: 3px solid #9747FF;
   position: relative;
@@ -45,9 +45,9 @@
 }
 
 .data-card:hover {
-  width: 70%;
-  height: 50%;
-  transform: translateY(-13px);
+  width: 150px;
+  height: 150px;
+  transform: translateY(-8px);
   transition: .3s ease-in-out;
 }
 
