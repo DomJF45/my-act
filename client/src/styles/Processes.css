@@ -5,12 +5,31 @@
   margin-inline: auto;
 }
 
+#light #title-container {
+  color: #303030;
+}
+
+#dark #title-container {
+  color: #fff;
+}
+
 #process-container {
   width: 75% !important;
 }
 
+#light #process-container {
+  color: #303030;
+}
+
+#dark #process-container {
+  color: #fff;
+}
+
 #back-dir {
   width: 75%;
+  margin-block: 0;
+  padding: 0;
+  margin-inline: auto;
 }
 
 .back {
@@ -20,8 +39,16 @@
   align-content: center;
   margin-inline: 0;
   padding-inline: 0;
-  width: fit-content;
+  width: 100%;
   height: fit-content;
+}
+
+#light .back {
+  color: #303030;
+}
+
+#dark .back {
+  color: #fff;
 }
 
 .back:hover {

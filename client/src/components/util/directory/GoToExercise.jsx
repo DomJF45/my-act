@@ -11,6 +11,14 @@ const GoToExercise = ({ page }) => {
   return (
     <div 
       style={{
+        width: '100%',
+        height: '50px',
+        display: 'flex',
+        justifyContent: 'flex-end'
+      }}
+    >
+      <div
+      style={{
         backgroundColor: '#f4ebff',
         height: '50px',
         display: 'flex',
@@ -19,13 +27,13 @@ const GoToExercise = ({ page }) => {
         float: 'right',
         borderRadius: '15px',
         marginBottom: '5rem',
-        marginRight: '10%'
       }}
       id='go-to'
       onClick={() => navigate(page)}
-    >
-      <p style={{padding: 0, margin: '0 0 0 .5rem'}}>Go to Exercise</p>
-      <FontAwesomeIcon style={{marginLeft: '1rem'}} icon={faChevronRight} />
+      >
+        <p style={{padding: 0, margin: '0 0 0 .5rem'}}>Go to Exercise</p>
+        <FontAwesomeIcon style={{marginLeft: '1rem'}} icon={faChevronRight} />
+      </div>
     </div>
   )
 }
