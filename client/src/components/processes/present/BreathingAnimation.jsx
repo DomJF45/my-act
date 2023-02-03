@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 
 const BreathingAnimation = (props) => {
   return (
-    <div className="exercise-container">
-      <>
+    <div style={{display: 'flex', justifyContent: 'center',  height: 'calc(100vh - 4.75rem)', width: '100%'}}>
+      <div className='exercise-container'>
         <div className='circle-container'>
           <motion.div 
             className='circle'
@@ -56,7 +56,7 @@ const BreathingAnimation = (props) => {
             <p>Time Left: {props.counter}</p>
           </div>
         </div> */}
-      </>
+      </div>
     </div>
   )
 }

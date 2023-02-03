@@ -80,36 +80,40 @@ const Breathing = () => {
 
   return (
     <div style={{
-      height: '90vh'
+      height: 'calc(100vh - 4.75rem)'
     }}>
-      <div className='bottom'>
+      <div className='bottom' style={{height: finish && '80vh'}}>
         <h2 style={showBreath || finish ? {display: 'none'} : {display: 'block'}}>Welcome {user?.name ? user?.name : 'Guest'}</h2>
         <div>
           { 
             finish && (
 
-              <>
-                <motion.p
-                  className='done'
-                  initial={{opacity:0}}
-                  animate={{opacity: 1}}
-                  transition={{duration: 1, ease:'linear'}}
-                >All Done</motion.p>
-                <motion.div
-                  style={{textAlign: 'center'}}
-                  initial={{opacity: 0}}
-                  animate={{opacity: 1, x: [20, 0]}}
-                  transition={{duration: 1, delay: .5, ease: 'linear'}}
-                >
-                  <FontAwesomeIcon id='back-btn' onClick={() => navigate(-1)} color='#b989f9' size={'xl'} icon={faChevronCircleLeft} /><span style={{marginLeft: '.5rem'}} className='go-back'>Go Back</span>
-                </motion.div>
-              </>
+              <div style={{height: '100vh', display: 'flex', alignItems: 'center'}}>
+                <div>
+
+
+                  <motion.p
+                    className='done'
+                    initial={{opacity:0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 1, ease:'linear'}}
+                  >All Done</motion.p>
+                  <motion.div
+                    style={{textAlign: 'center'}}
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1, x: [20, 0]}}
+                    transition={{duration: 1, delay: .5, ease: 'linear'}}
+                  >
+                    <FontAwesomeIcon id='back-btn' onClick={() => navigate(-1)} color='#b989f9' size={'xl'} icon={faChevronCircleLeft} /><span style={{marginLeft: '.5rem'}} className='go-back'>Go Back</span>
+                  </motion.div>
+                </div>
+              </div>
             )     
           }
         </div>
         
       </div>
-      <div style={{height: '80%'}}>
+      <div style={{height: finish ? '0':'80%'}}>
 
         <motion.div 
           className='container d-flex justify-content-center'

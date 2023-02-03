@@ -13,7 +13,7 @@ const Exercise = ({ exercise }) => {
   const { mode } = useSelector((state) => state.theme);
 
   return (
-    <IconContext.Provider value={{color: mode === 'dark' ? '#dac0fc' : '#9747FF'}}>
+    <IconContext.Provider value={{color: mode === 'dark' ? '#B379FE' : '#9747FF'}}>
       <a className='card-box' onClick={() => navigate(exercise.link)}>
         <div
           style={{
@@ -31,7 +31,9 @@ const Exercise = ({ exercise }) => {
           height: '120px',
           position: 'absolute',
           bottom: 0,
-          borderTop: '1px solid #dac0fc'
+          borderTop: '1px solid #dac0fc',
+          borderBottomLeftRadius: '5px',
+          borderBottomRightRadius: '5px'
         }}>
           <div>
             <span style={{fontSize: '2rem', marginLeft: '1rem'}}>{exercise.name}</span>

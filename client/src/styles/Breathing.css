@@ -4,17 +4,16 @@
   margin-right: auto;
   padding: 0;
   position: relative;
-  height: 80vh;
+  
 }
 .st-cont {
   display: block;
 
 }
 .circle-container {
-  height: 100%;
+  margin-top: 30vh;
   display: flex;
   justify-content: center;
-  margin-top: 20%;
   position: relative;
 }
 

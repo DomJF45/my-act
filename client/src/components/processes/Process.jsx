@@ -40,7 +40,9 @@ const Process = ({ process, index }) => {
         height: '120px',
         position: 'absolute',
         bottom: 0,
-        borderTop: '1px solid #dac0fc'
+        borderTop: '1px solid #dac0fc',
+        borderBottomLeftRadius: '5px',
+        borderBottomRightRadius: '5px'
       }}>
         <div>
           <span style={{fontSize: '2rem', marginLeft: '1rem'}}>{process.processName}</span>

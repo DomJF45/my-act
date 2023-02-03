@@ -16,7 +16,14 @@
 
 #go-to {
   transition: .1s ease-in-out;
-  color: #303030 !important;
+}
+
+#light #go-to {
+  color: #303030; 
+}
+
+#dark #go-to {
+  color: rgba(255,255,255,.87)
 }
 
 #go-to:hover {

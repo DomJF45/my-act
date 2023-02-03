@@ -1,20 +1,16 @@
-import React from 'react'
-import { useNavigate } from 'react-router'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
-import '../../../styles/Processes.css'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import '../../../styles/Processes.css';
 
 const GoBack = ({page}) => {
 
   const navigate = useNavigate();
+  const { mode } = useSelector((state) => state.theme);
 
   return (
-    // <>
-    //   <div className='back' onClick={() => navigate(page)}  >
-    //     <FontAwesomeIcon className='icon' icon={faChevronLeft}size={'xl'} />
-    //     <p>Go Back</p>
-    //   </div>
-    // </>
     <div 
       style={{
         width: '100%',
@@ -25,7 +21,7 @@ const GoBack = ({page}) => {
     >
       <div
       style={{
-        backgroundColor: '#f4ebff',
+        backgroundColor: mode === 'dark' ? '#A967FF' : '#f4ebff',
         height: '50px',
         display: 'flex',
         alignItems: 'center',

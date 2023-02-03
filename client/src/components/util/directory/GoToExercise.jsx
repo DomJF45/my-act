@@ -1,12 +1,15 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import '../../../styles/util/Utils.css'
+import '../../../styles/util/Utils.css';
 
 const GoToExercise = ({ page }) => {
 
   const navigate = useNavigate();
+
+  const { mode } = useSelector((state) => state.theme);
 
   return (
     <div 
@@ -14,12 +17,14 @@ const GoToExercise = ({ page }) => {
         width: '100%',
         height: '50px',
         display: 'flex',
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
+        
       }}
     >
       <div
       style={{
-        backgroundColor: '#f4ebff',
+        backgroundColor: mode === 'dark' ? '#A967FF' : '#f4ebff',
+        
         height: '50px',
         display: 'flex',
         alignItems: 'center',

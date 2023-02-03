@@ -12,7 +12,7 @@ const MenuItems = ({ items, mode }) => {
     textDecoration: 'none'
   }
   const inActiveStyle = {
-    color: mode === 'dark' ? '#fff' : 'gray',
+    color: mode === 'dark' ? 'rgba(255,255,255, 0.87)' : 'gray',
     textDecoration: 'none'
   }
 

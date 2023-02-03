@@ -90,5 +90,10 @@ export const SidebarData = [
         path: '/processess/breathing'
       },
     ]
+  },
+  {
+    title: 'Journal',
+    path: '/journal',
+    cName: 'nav-text'
   }
 ]

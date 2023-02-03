@@ -40,6 +40,8 @@ import AllExercises from './components/processes/AllExercises';
 import Footer from './components/footer/Footer';
 import Sidebar from './components/navbar/Sidebar';
 import NavbarHandler from './components/navbar/NavbarHandler';
+import JournalPage from './components/journal/JournalPage';
+import Post from './components/journal/Post';
 
 const fakeUserData = {
   id: '123',
@@ -209,6 +211,14 @@ function App() {
       {
         path: '/exercises',
         element: <AllExercises />
+      },
+      {
+        path: '/journal',
+        element: <JournalPage />
+      },
+      {
+        path: '/journal/post/:id',
+        element: <Post />
       }
       ]
     }
@@ -223,31 +233,6 @@ function App() {
       </UserContext.Provider> */}
       <UserContextProvider>
         <RouterProvider router={router} />
-        {/* <Router>
-          
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/services' element={<Services />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/processes' element={<Processes />} />
-            <Route path='/processes/present' element={<Present />} />
-            <Route path='/processes/present/breathing' element={<Breathing />} />
-            <Route path='/processes/values' element={<Values />} />
-            <Route path='/processes/values/card-sort' element={<CardSort />} />
-            <Route path='/processes/commitment' element={<Commitment />} />
-            <Route path='/processes/commitment/goal-setting' element={<GoalSetting />} />
-            <Route path='/processes/self' element={<Self />} />
-            <Route path='/processes/self/the-observing-self' element={<ObservingSelf />} />
-            <Route path='/processes/defusion' element={<Defusion />} />
-            <Route path='/processes/defusion/label-thoughts' element={<LabelThoughts />} />
-            <Route path='/processes/acceptance' element={<Acceptance />} />
-            <Route path='/processes/acceptance/acceptance-survey' element={<Survey />} />
-            <Route path='/exercises' element={<AllExercises />} />
-          </Routes>
-        </Router> */}
         <ToastContainer />
       </UserContextProvider>
      

@@ -9,7 +9,7 @@ const Done = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='container justify-content-center d-flex' style={{marginTop: '15rem'}}>
+    <div style={{height: 'calc(100vh - 4.75rem)', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
       <div>
       <motion.p
         className='done'

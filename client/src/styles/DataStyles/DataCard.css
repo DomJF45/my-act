@@ -10,7 +10,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  background-color: rgb(235, 235, 235);
   border-radius: 20px;
   height: 35vh;
   margin-left: 2rem;
@@ -18,7 +17,6 @@
 .data-container-alt {
   margin-top: 1rem;
   width: 100%;
-  background-color: rgb(235, 235, 235);
   border-radius: 20px;
   height: 35vh;
   margin-left: 2rem;
@@ -26,22 +24,52 @@
 }
 .l-data-container {
   width: 45%;
-  background-color: rgb(235, 235, 235);
   margin-top: 0;
   border-radius: 20px;
   height: 72vh;
 }
+
+#light .data-container {
+  background-color: rgb(235,235, 235);
+}
+#dark .data-container {
+  background-color: #4E4E4E;
+}
+
+#light .data-container-alt {
+  background-color: rgb(235,235, 235);
+}
+#dark .data-container-alt {
+  background-color: #4E4E4E;
+}
+
+#light .l-data-container {
+  background-color: rgb(235,235, 235);
+}
+#dark .l-data-container {
+  background-color: #4E4E4E;
+}
+
 .data-card {
   width: 150px;
   height: 150px;
-  background-color: #f2e8ff;
-  border: 3px solid #9747FF;
+  
   position: relative;
   display: flex;
   border-radius: 10px;
   align-self: center;
   justify-self: center;
   transition: .3s ease-in-out;
+}
+
+#light .data-card {
+  background-color: #f2e8ff;
+  border: 3px solid #9747FF;
+}
+
+#dark .data-card {
+  background-color: #DAC0FC;
+  border: 3px solid #B379FE;
 }
 
 .data-card:hover {

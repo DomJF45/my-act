@@ -5,7 +5,7 @@ const useColorTheme = () => {
   
   const { mode } = useSelector((state) => state.theme);
 
-  const color = (mode === 'dark' ? '#fff' : '#303030');
+  const color = (mode === 'dark' ? 'rgba(255,255,255, .87)' : '#303030');
 
   return color;
 

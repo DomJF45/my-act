@@ -24,7 +24,7 @@ const Processes = () => {
 
   return (
     <>
-      <IconContext.Provider value={{color: mode === 'dark' ? '#dac0fc' : '#9747FF'}}>
+      <IconContext.Provider value={{color: mode === 'dark' ? '#B379FE' : '#9747FF'}}>
         {/* <div className='dashboard-container'> */}
           <div className="container"
             style={{

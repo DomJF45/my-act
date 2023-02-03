@@ -75,7 +75,7 @@ const TopContainer = () => {
                 float: 'left',
                 fontSize: '1.5rem',
                 fontWeight: '300',
-                color: mode === 'dark' ? '#fff' : '#303030',
+                color: mode === 'dark' ? 'rgba(255,255,255,.87)' : '#303030',
                 transition: '.3s ease'
               }}>
                 My<a style={{color: '#9747FF'}}>ACT</a>

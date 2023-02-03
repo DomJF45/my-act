@@ -98,12 +98,12 @@ const CardSort = () => {
     <>
     
     
-    <div className='container mt-2' style={{height: '80vh'}}>
+    <div className='mt-2' style={{height: 'calc(100vh)'}}>
     <div
       style={{
           display: 'flex',
           justifyContent: 'center',
-          height: '50%',
+          height: 'calc(100vh - 7rem)',
           position: 'relative',
           width: '100%'
       }}
@@ -181,13 +181,15 @@ const CardSort = () => {
         })}
       </DragDropContext>
     </div>
-    </div>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+
       <div 
-        
         style={{
-          width: '40%',
-          marginInline: 'auto',
-          height: '5vh',
+          width: '100%',
+          height: '30px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
         }}
       >
         <Button id='saveBtn' onClick={saveResults} style={{
@@ -196,7 +198,8 @@ const CardSort = () => {
           justifySelf: 'center'
         }}>Save</Button>
       </div>
-      <div style={{height: '20vh'}} />
+    </div>
+    </div>
     </>
   )
 }
