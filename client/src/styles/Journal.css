@@ -28,7 +28,6 @@
 
 
 .entry {
-  padding: 1rem;
   text-decoration: none;
   cursor: pointer;
   margin-inline: 1rem;
@@ -47,9 +46,7 @@
 }
 
 .entry-ribbon {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   height: 32px;
   width: 100%;
   border-top-right-radius: 5px;
@@ -89,10 +86,13 @@
 
 .entry-title {
   display: flex;
-  height: 100px;
+  height: calc(100% - 32px);
   align-items: center;
+  padding-left: 1rem;
 }
-
+.entry-title h2 {
+  
+}
 
 #add-icon {
   margin-right: 2rem;
