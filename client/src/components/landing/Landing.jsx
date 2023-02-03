@@ -1,16 +1,11 @@
 import React from 'react'
-import Navigation from '../navbar/Navigation';
 import { useNavigate } from 'react-router';
-import values from '../../img/values.svg';
 import '../../styles/Landing.css';
-import Logo from './Logo';
 import { Button, Container } from 'react-bootstrap';
 import therapyHumaaans from '../../img/therapyHumaaans.svg';
-import selfImg from '../../img/self_img.png'
 import aware from '../../img/aware.svg';
 import presentHumans from '../../img/presentHumans.svg';
 import Footer from '../footer/Footer';
-import FullNavbar from '../navbar/FullNavbar';
 
 export const Landing = () => {
 

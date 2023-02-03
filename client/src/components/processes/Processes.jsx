@@ -1,14 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
-import { Container } from 'react-bootstrap';
-import FullNavbar from '../navbar/FullNavbar';
 import { processData } from './processData';
 import '../../styles/Processes.css';
 import '../../styles/Card.css';
-import GoBack from '../util/directory/GoBack';
-import Sidebar from '../navbar/Sidebar';
-import NavbarHandler from '../navbar/NavbarHandler';
 import { IconContext } from 'react-icons';
 
 import Process from './Process';

@@ -9,7 +9,7 @@ import { IoAddOutline } from 'react-icons/io5';
 import { Button } from 'react-bootstrap';
 import Modal from './modal/Modal';
 import '../../styles/Journal.css';
-import JournalFilter from './JournalFilter';
+import JournalFilter from './filter/JournalFilter';
 
 const JournalPage = () => {
 

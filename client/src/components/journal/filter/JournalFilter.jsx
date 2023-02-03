@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MdOutlineFilterList } from 'react-icons/md'
-import useEllipses from '../util/hooks/useEllipses';
+import useEllipses from '../../util/hooks/useEllipses';
 import Filter from './Filter';
 
 const filterData = [

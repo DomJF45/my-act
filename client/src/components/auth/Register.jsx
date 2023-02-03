@@ -1,13 +1,10 @@
 import React, { useRef, useContext, useState } from 'react';
-import Navigation from '../navbar/Navigation';
 import { Link, useNavigate } from 'react-router-dom';
-import ErrorToast from '../util/toasts/ErrorToast';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import '../../styles/Register.css'
 import { Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import { UserContext } from '../../App';
 import axios from 'axios';
 
 const API_URL = '/api/users/register';

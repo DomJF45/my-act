@@ -1,11 +1,10 @@
-import React, { useState, createContext } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FullNavbar from './components/navbar/FullNavbar';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 

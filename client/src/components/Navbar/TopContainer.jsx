@@ -1,16 +1,11 @@
 import React, { useState, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDarkTheme, setLightTheme } from '../../features/theme/themeSlice';
-import { NavLink } from 'react-router-dom';
-import { IconContext } from 'react-icons';
 import { HiMoon } from 'react-icons/hi';
 import { FaUserCircle } from 'react-icons/fa';
-import { BiChevronDown } from 'react-icons/bi';
 import { SidebarData } from './sidebarData';
-import Dropdown from './Dropdown';
 import '../../styles/Navigation.css';
 import MenuItems from './MenuItems';
-import ThemeContext from '../../App';
 
 const TopContainer = () => {
 

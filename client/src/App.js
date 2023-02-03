@@ -1,16 +1,12 @@
 import './index.css';
-import { useState, createContext, useContext, useEffect } from 'react';
+import { useState, createContext, useEffect } from 'react';
 import { 
   createBrowserRouter, 
   RouterProvider,
-  useNavigate,
   BrowserRouter as Router,
-  Routes,
-  Route,
   Outlet
 } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { setDarkTheme, setLightTheme } from './features/theme/themeSlice';
 import { Landing } from './components/landing/Landing';
 import About from './components/about/About';
 import Services from './components/services/Services';
@@ -28,27 +24,17 @@ import Self from './components/processes/self/Self';
 import Acceptance from './components/processes/acceptance/Acceptance';
 import UserInfo from './components/userInfo/UserInfo';
 import Defusion from './components/processes/defusion/Defusion';
-import FullNavbar from './components/navbar/FullNavbar';
 import Breathing from './components/processes/present/Breathing';
 import CardSort from './components/processes/values/CardSort';
 import GoalSetting from './components/processes/commitment/GoalSetting';
 import ObservingSelf from './components/processes/self/ObservingSelf';
 import LabelThoughts from './components/processes/defusion/LabelThoughts';
 import Survey from './components/processes/acceptance/Survey';
-import ExercisesCard from './components/dashboard/cards/ExercisesCard';
 import AllExercises from './components/processes/AllExercises';
 import Footer from './components/footer/Footer';
-import Sidebar from './components/navbar/Sidebar';
 import NavbarHandler from './components/navbar/NavbarHandler';
 import JournalPage from './components/journal/JournalPage';
 import Post from './components/journal/Post';
-
-const fakeUserData = {
-  id: '123',
-  name: 'john',
-  email: 'john@mail.com',
-  password: '123'
-}
 
 const LayOut = () => {
 

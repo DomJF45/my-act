@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
-import Dropdown from './Dropdown';
 
 const MenuItems = ({ items, mode }) => {
 
@@ -20,8 +19,8 @@ const MenuItems = ({ items, mode }) => {
     <NavLink to={items.path} className='right-link'
       style={({isActive}) => isActive ? activeStyle : inActiveStyle}
     >
-        {items.title}
-      </NavLink>
+      {items.title}
+    </NavLink>
   )
 }
 
