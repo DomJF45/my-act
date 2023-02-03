@@ -63,8 +63,8 @@ const Modal = ({ modalShow, setModalShow }) => {
               <Form className="entry-form" id="entry-form">
                 <h4>Title</h4>
                 <Form.Control placeholder='title' value={title} onChange={(e) => setTitle(e.target.value)} />
-                <h4>Body</h4>
-                <Form.Control placeholder='body' as='textarea' rows={10} value={body} onChange={(e) => setBody(e.target.value)} />
+                <h4 style={{marginTop: '1rem'}}>Body</h4>
+                <Form.Control placeholder='body' as='textarea' rows={8} value={body} onChange={(e) => setBody(e.target.value)} />
               </Form>
             </div>
           </div>

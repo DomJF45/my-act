@@ -9,6 +9,7 @@ import { IoAddOutline } from 'react-icons/io5';
 import { Button } from 'react-bootstrap';
 import Modal from './modal/Modal';
 import '../../styles/Journal.css';
+import JournalFilter from './JournalFilter';
 
 const JournalPage = () => {
 
@@ -16,10 +17,7 @@ const JournalPage = () => {
   const { posts } = useSelector((state) => state.journal);
   let journalData = posts;
   const [modalShow, setModalShow] = useState(false);
-  
-  useEffect(() => {
-
-  }, [])
+  const [filter, setFilter] = useState('all');
 
   return (
     <>
@@ -34,7 +32,11 @@ const JournalPage = () => {
             marginInline: '1rem',
           }}
         >
-          <h1 style={{color: mode === 'dark' ? 'rgba(255,255,255, .87)' : '#9747FF'}}>Your Journal</h1>
+          <div style={{display: 'flex', height: '100%', alignItems: 'center'}}>
+            <h1 style={{color: mode === 'dark' ? 'rgba(255,255,255, .87)' : '#9747FF'}}>Your Journal</h1>
+            {/* add filter component here */}
+            <JournalFilter filter={filter} setFilter={setFilter} />
+          </div>
           <div id='add-icon' onClick={() => setModalShow(true)}>
             <IconContext.Provider value={{color: mode === 'dark' ? 'rgba(255,255,255, .87)' : '#FFF'}}>
               <IoAddOutline size={25} /> 
@@ -42,7 +44,7 @@ const JournalPage = () => {
           </div>
         </div>
         <div className="animate-fade-up">
-          <Entries journal={journalData} />
+          <Entries journal={journalData} filter={filter} />
         </div>
       </div>
       <Modal modalShow={modalShow} setModalShow={setModalShow} />

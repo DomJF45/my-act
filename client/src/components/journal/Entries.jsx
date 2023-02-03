@@ -1,9 +1,11 @@
 import React from 'react';
 import Entry from './Entry';
 import { Container } from 'react-bootstrap';
+import useFilter from '../util/hooks/useFilter';
 
-const Entries = ({ journal }) => {
+const Entries = ({ journal, filter }) => {
 
+  const filteredJournals = useFilter(journal, filter);
 
   if (journal === null || journal.length === 0) {
     return (
@@ -22,7 +24,7 @@ const Entries = ({ journal }) => {
 
     return (
       <div className='entries-container'>
-        {journal.map((entry, index) => {
+        {filteredJournals.map((entry, index) => {
           return (
             <Entry entry={entry} key={index} />
           )

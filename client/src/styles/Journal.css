@@ -118,3 +118,50 @@
 #dark #add-icon {
   background-color: #B379FE;
 }
+
+.filter-container {
+  background-color: #B379FE;
+  width: 100px;
+  margin-left: 2rem;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  justify-content: space-between;
+  position: relative;
+  transition: .2s ease-in-out;
+}
+
+.filter-container > p {
+  color:rgba(255,255,255, .87);
+}
+
+.filter-dropdown {
+  background-color: #B379FE;
+  overflow: hidden;
+  width: 100px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  transition: .2s ease-in-out;
+}
+
+.filter-dropdown > a {
+  margin: 0 0 0 .5rem;
+  padding: 0;
+  cursor: pointer;
+  width: fit-content;
+  color:rgba(255,255,255, .87) !important;
+}
+
+
+#filter-icon {
+  cursor: pointer;
+}

@@ -116,7 +116,7 @@ const TopContainer = () => {
                 float: 'right',
                 zIndex: 9999,
                 cursor: 'pointer'
-              }}><FaUserCircle className='n-icon' size={30} /></a>
+              }}><FaUserCircle className='n-icon' size={30} style={{color: mode === 'dark' ? 'rgba(255,255,255, .87)' : 'rgb(205,205,205)'}} /></a>
             </div>
           </div>
         </nav>
