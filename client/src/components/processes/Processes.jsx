@@ -1,35 +1,26 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 import { processData } from './processData';
+import { IconContext } from 'react-icons';
+import Process from './Process';
 import '../../styles/Processes.css';
 import '../../styles/Card.css';
-import { IconContext } from 'react-icons';
 
-import Process from './Process';
 
 const Processes = () => {
 
-  const navigate = useNavigate();
-  
-
   const { mode } = useSelector((state) => state.theme);
-
-  const darkLightModeColor = (mode === 'dark' ? '#fff' : '#303030');
 
   return (
     <>
       <IconContext.Provider value={{color: mode === 'dark' ? '#B379FE' : '#9747FF'}}>
-        {/* <div className='dashboard-container'> */}
-          <div className="container"
-            style={{
-              height: '100%',
-              marginTop: '50px'
-            }}
-          >
+        <div className="container"
+          style={{
+            height: '100%',
+            marginTop: '50px'
+          }}
+        >
           <div className='animate-fade-up'>
-            {/* <h1 style={{color: darkLightModeColor}}>Process Hub</h1>
-            <p style={{color: darkLightModeColor}}>Each of these cards will direct you to more information about their process, along with an interactive exercise!</p> */}
             <div className="link-container" style={{
               position: 'relative'
             }}>
@@ -38,8 +29,7 @@ const Processes = () => {
               ))}
             </div>
           </div>
-          </div>
-        {/* </div> */}
+        </div>
       </IconContext.Provider>
     </>
   )

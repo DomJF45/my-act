@@ -1,6 +1,6 @@
-import React from 'react'
-import { ResponsiveContainer, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from 'recharts'
-import useScreenSize from '../../../util/hooks/useScreenSize'
+import React from 'react';
+import { ResponsiveContainer, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from 'recharts';
+import useScreenSize from '../../util/hooks/useScreenSize';
 
 const CoreProcessRadar = (props) => {
 

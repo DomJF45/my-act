@@ -3,12 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button, Card, Form } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faC, faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import BreathingAnimation from './BreathingAnimation';
 import '../../../styles/Breathing.css';
-import { useContext } from 'react';
-import { UserContext, UserContextProvider } from '../../../App';
 
 const API_URL = '/api/breathing'
 
@@ -21,10 +19,7 @@ const Breathing = () => {
   const [finish, setFinish] = useState(false);
   const [counter, setCounter] = useState(60);
   const [endCounter, setEndCounter] = useState(8);
-  // const [user, setUser] = useState(null);
   const navigate = useNavigate();
-  const user = useContext(UserContext)
-  
   
   const startExercise = () => {
     console.log(speedRef.current.value)
@@ -35,7 +30,7 @@ const Breathing = () => {
     setShowBreath(true);
   }
 
-  
+  const user = 'guest'; // for now
 
   console.log(user)
   
@@ -49,14 +44,6 @@ const Breathing = () => {
     // setUser(JSON.parse(localStorage.getItem('user')));
     // setUser(UserContext.Provider._context._currentValue)
 
-    const getData = async () => {
-      try {
-        const res = await axios.get(API_URL);
-        return res.data;
-      } catch (err) {
-        console.log(err);
-      }
-    }
     // setSpeed(getData);
 
     if (startTimer) {

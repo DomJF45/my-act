@@ -1,13 +1,9 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import '../../../styles/util/Utils.css';
 
 const Next = (props) => {
-
-  const navigate = useNavigate();
-
   return (
     <div 
       style={{

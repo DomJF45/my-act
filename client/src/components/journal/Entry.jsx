@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
-import { BiRadioCircleMarked } from 'react-icons/bi';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 import useEllipses from '../util/hooks/useEllipses';
 import MoodIcon from './MoodIcon';
@@ -22,7 +21,6 @@ const Entry = ({ entry }) => {
       <div className='entry-ribbon'>
         <div style={{width: '90%', display: 'flex', height: '100%', alignItems: 'center', justifyContent: 'space-between'}}>  
           <div style={{display: 'flex'}}>
-            {/* <BiRadioCircleMarked size={25} /> */}
             <MoodIcon mood={entry.mood} />
             <p style={{marginLeft: '1rem', padding: 0, marginBlock: 0}}>{entry.date}</p>
           </div>

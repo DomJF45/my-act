@@ -1,5 +1,3 @@
-import React from 'react'
-
 const useFilter = (journalData, filter) => {
 
   let arrForSort = [...journalData];
@@ -12,13 +10,13 @@ const useFilter = (journalData, filter) => {
         const c = new Date(a.date);
         const d = new Date(b.date);
         return c - d;
-      }); // for now
+      });
     case ('date(desc)'):
       return arrForSort.sort(function(a, b) {
         const c = new Date(a.date);
         const d = new Date(b.date);
         return d - c;
-      }); // for now
+      });
     case ('happy'):
       return arrForSort.filter((entry) => entry.mood === 'happy' && entry.mood === filter);
     case ('good'):
@@ -34,4 +32,4 @@ const useFilter = (journalData, filter) => {
   }
 }
 
-export default useFilter
+export default useFilter;

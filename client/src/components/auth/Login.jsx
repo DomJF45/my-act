@@ -1,14 +1,11 @@
 import React, { useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
 import '../../styles/Register.css'
-import { Button } from 'react-bootstrap';
-import axios from 'axios';
 
-const API_URL = '/api/users/login'
-
-const Login = ({ setUser }) => {
+const Login = () => {
 
   const emailRef = useRef();
   const passRef = useRef();
@@ -28,15 +25,6 @@ const Login = ({ setUser }) => {
      * handle login post here
      * fields: email, password
      */
-
-    try {
-      const login = await axios.post(API_URL, userData);
-      setUser(login);
-      localStorage.setItem('user', JSON.stringify(login));
-      navigate('/dashboard');
-    } catch (err) {
-      console.log(err)
-    }
 
   }
 

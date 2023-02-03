@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
 import { DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
-import { nanoid } from 'nanoid'
-import { v4 as uuid} from 'uuid';
 import { cardData } from './cardData';
-import GoBack from '../../util/directory/GoBack';
-import '../../../styles/processes/Values.css';
 import { Button } from 'react-bootstrap';
 import Done from '../../util/directory/Done';
+import '../../../styles/processes/Values.css';
 
 const columnsFromBackend = {
   ['unsorted']: {

@@ -1,5 +1,5 @@
-import React from 'react'
-import { LineChart, ResponsiveContainer, XAxis, YAxis, Line, Legend, Tooltip } from 'recharts'
+import React from 'react';
+import { LineChart, ResponsiveContainer, XAxis, YAxis, Line, Legend, Tooltip } from 'recharts';
 
 const ExerciseGraph = (props) => {
   return (

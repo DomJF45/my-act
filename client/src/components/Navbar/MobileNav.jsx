@@ -2,18 +2,11 @@ import React, { useState } from 'react';
 import { IconContext } from 'react-icons';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDarkTheme, setLightTheme } from '../../features/theme/themeSlice';
-import { HiOutlineBars3 } from 'react-icons/hi2';
-import { HiX } from 'react-icons/hi';
-import { IoIosMenu } from 'react-icons/io';
-import { VscMenu } from 'react-icons/vsc';
 import { RiMenu5Line, RiCloseLine } from 'react-icons/ri';
 import { SidebarData } from './sidebarData';
-import { Link, useParams, NavLink } from 'react-router-dom';
-import { AiFillGithub, AiFillFacebook, AiFillTwitterCircle } from 'react-icons/ai';
-import { GiStripedSun } from 'react-icons/gi';
+import { NavLink } from 'react-router-dom';
 import { HiMoon, HiLightBulb } from 'react-icons/hi';
 import { FaUserCircle } from 'react-icons/fa';
-import { CgCoffee } from 'react-icons/cg';
 import { useNavigate } from 'react-router-dom';
 import { BiChevronRight } from 'react-icons/bi';
 import '../../styles/MobileSidebar.css';
@@ -45,23 +38,12 @@ const MobileNav = () => {
   }
 
   const [openSideBar, setOpenSideBar] = useState(false);
-  const [currentLightMode, setCurrentLightMode] = useState(false);
   
   const navigate = useNavigate();
 
   const handleOpenSideBar = () => {
     setOpenSideBar(!openSideBar);
   }
-
-  const handleLightMode = () => {
-    setCurrentLightMode((prev) => !prev);
-  }
-
-  const handleNavigate = (route) => {
-    navigate(`${route}`);
-    handleOpenSideBar();
-  }
-
 
   return (
     <>

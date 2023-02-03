@@ -1,11 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router';
-import '../../styles/Landing.css';
-import { Button, Container } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import therapyHumaaans from '../../img/therapyHumaaans.svg';
 import aware from '../../img/aware.svg';
 import presentHumans from '../../img/presentHumans.svg';
 import Footer from '../footer/Footer';
+import '../../styles/Landing.css';
 
 export const Landing = () => {
 
@@ -63,14 +63,11 @@ export const Landing = () => {
           <div className="header">
             <h1 style={{textAlign: "end"}}>Be Aware</h1>
             <div className='pic-container-alt'>
-              {/* <img src={selfImg} /> */}
               <object className='pic-content' data={aware} type='image/svg+xml' />
             </div>
             <div className='div-divider-alt'></div>
           </div>
-          
         </div>
-
         <div className='main-grid'>
           <div className='header'>
             <h1>Be Present</h1>
@@ -79,9 +76,7 @@ export const Landing = () => {
             </div>
           </div>
           <div className="header-text">
-            
             <p>Become more present in your everyday surroundings!</p>
-            
           </div>
         </div>
       </div>

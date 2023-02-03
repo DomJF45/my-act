@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import { Form, Card, Button } from 'react-bootstrap';
-import axios from 'axios';
 import Done from '../../util/directory/Done';
-
-// API url here
-const API_URL = '/api/survey'
 
 const questionsFromBackend = [
   {q: 'My painful experiences and memories make it difficult for me to live a life that I would value.'},
@@ -30,7 +26,7 @@ const Survey = () => {
 
   const userIdTest = '12345';
 
-  const [check, setCheck] = useState(0);
+
   const [questions, setQuestions] = useState(questionsFromBackend);
   const [likertOptions, setLikertOptions] = useState(optionsFromBackend);
   const [finished, setFinished] = useState(false);
@@ -73,13 +69,6 @@ const Survey = () => {
     }
 
     console.log(data);
-
-    try {
-      const res = await axios.post(API_URL, data);
-      console.log(res.data);
-    } catch (err) {
-      console.log(err);
-    }
 
 
     /**

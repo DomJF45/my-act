@@ -9,7 +9,6 @@ const DeleteModal = ({ id, open, setOpenTools }) => {
 
   const handleDelete = () => {
     if (open) {
-      // delete
       dispatch(deletePost(id));
       setOpenTools(false);
     } 

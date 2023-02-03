@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import './Modal.css';
 import { Button, Form } from 'react-bootstrap';
-import { IconContext } from 'react-icons/lib';
 import { moodData } from './moodData';
 import { RiCloseLine } from 'react-icons/ri';
 import { useDispatch } from 'react-redux';
@@ -9,6 +7,7 @@ import { nanoid } from '@reduxjs/toolkit';
 import { addPost } from '../../../features/journal/journalSlice';
 import useDate from '../../util/hooks/useDate';
 import Mood from './Mood';
+import './Modal.css';
 
 const Modal = ({ modalShow, setModalShow }) => {
 
@@ -21,8 +20,6 @@ const Modal = ({ modalShow, setModalShow }) => {
 
   const handleAddPost = () => {
 
-    
-
     const postData = {
       id: nanoid(),
       date: todaysDate,
@@ -33,7 +30,6 @@ const Modal = ({ modalShow, setModalShow }) => {
 
     dispatch(addPost(postData));    
 
-    // console.log(postData);
     setModalShow(false);
 
   }

@@ -1,5 +1,3 @@
-import { nanoid } from "nanoid"
-
 export const cardData = [
   {
     id: '1',

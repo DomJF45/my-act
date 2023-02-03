@@ -1,8 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import GoBack from '../../util/directory/GoBack'
-import GoToExercise from '../../util/directory/GoToExercise'
-import YoutubeEmbed from '../../util/video/YoutubeEmbed'
+import React from 'react';
+import GoBack from '../../util/directory/GoBack';
+import GoToExercise from '../../util/directory/GoToExercise';
+import YoutubeEmbed from '../../util/video/YoutubeEmbed';
 import '../../../styles/processes/Present.css';
 
 const Values = () => {

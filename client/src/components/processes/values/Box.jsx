@@ -1,13 +1,13 @@
-import React from 'react'
-import { useState } from 'react'
-import Card from './Card'
-import { cardData } from './cardData'
-import '../../../styles/processes/Values.css'
+import React from 'react';
+import { useState } from 'react';
+import { cardData } from './cardData';
+import Card from './Card';
+import '../../../styles/processes/Values.css';
 
 const Box = ({ card, moveCard, label }) => {
 
   const [isOver, setIsOver] = useState(false);
-  const [oneCardData, setOneCardData] = useState({})
+  const [oneCardData, setOneCardData] = useState({});
 
   const handleDragOver = (e) => {
     if (e.dataTransfer.types[0] === 'text/plain') {

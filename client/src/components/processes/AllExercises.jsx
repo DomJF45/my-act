@@ -1,18 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
-import GoBack from '../util/directory/GoBack';
-import '../../styles/Card.css';
-import NavbarHandler from '../navbar/NavbarHandler';
-import { IconContext } from 'react-icons';
 import { AiOutlineHourglass } from 'react-icons/ai';
 import { BsBook } from 'react-icons/bs';
 import { FaRegHandshake } from 'react-icons/fa';
 import { MdSelfImprovement } from 'react-icons/md';
 import { RiTreasureMapLine } from 'react-icons/ri';
 import { FaRegSmile } from 'react-icons/fa';
-import useScreenSize from '../util/hooks/useScreenSize';
-import useColorTheme from '../util/hooks/uesColorTheme';
 import Exercise from './Exercise';
+import '../../styles/Card.css';
 
 const bigIcon = 100;
 const smallIcon = 80;
@@ -67,21 +61,19 @@ const AllExercises = () => {
 
   return (
     <>
-      
-        <div className='container' style={{ height: '100%', marginTop: '50px'}}>
-          <div className='animate-fade-up'>
-            <div className='link-container'>
-              {
-                exerciseInfo.map((ex, index) => {
-                  return (
-                    <Exercise exercise={ex} key={index} />
-                  )
-                })
-              }
-            </div>
+      <div className='container' style={{ height: '100%', marginTop: '50px'}}>
+        <div className='animate-fade-up'>
+          <div className='link-container'>
+            {
+              exerciseInfo.map((ex, index) => {
+                return (
+                  <Exercise exercise={ex} key={index} />
+                )
+              })
+            }
           </div>
         </div>
-      
+      </div>
     </>
   )
 }

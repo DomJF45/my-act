@@ -1,17 +1,16 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDarkTheme, setLightTheme } from '../../features/theme/themeSlice';
 import { HiMoon } from 'react-icons/hi';
 import { FaUserCircle } from 'react-icons/fa';
 import { SidebarData } from './sidebarData';
-import '../../styles/Navigation.css';
 import MenuItems from './MenuItems';
+import '../../styles/Navigation.css';
 
 const TopContainer = () => {
 
   const dispatch = useDispatch();
   const { mode } = useSelector((state) => state.theme);
-  const [currentLightMode, setCurrentLightMode] = useState(false);
 
   const setDark = () => {
     dispatch(setDarkTheme());

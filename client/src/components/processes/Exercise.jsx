@@ -3,13 +3,11 @@ import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 import { IconContext } from 'react-icons';
 import useScreenSize from '../util/hooks/useScreenSize';
-import useColorTheme from '../util/hooks/uesColorTheme';
 
 const Exercise = ({ exercise }) => {
 
   const navigate = useNavigate();
   const window = useScreenSize();
-  const textColorTheme = useColorTheme();
   const { mode } = useSelector((state) => state.theme);
 
   return (

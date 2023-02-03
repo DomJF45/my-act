@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 
 const MenuItems = ({ items, mode }) => {
-
-  const [submenuActive, setSubmenuActive] = useState(false);
 
   const activeStyle = {
     color: '#9747FF',
@@ -22,6 +19,7 @@ const MenuItems = ({ items, mode }) => {
       {items.title}
     </NavLink>
   )
+  
 }
 
 export default MenuItems

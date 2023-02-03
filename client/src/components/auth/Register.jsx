@@ -1,17 +1,12 @@
 import React, { useRef, useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
-import '../../styles/Register.css'
 import { Button } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import axios from 'axios';
+import Form from 'react-bootstrap/Form';
+import Card from 'react-bootstrap/Card';
+import '../../styles/Register.css';
 
-const API_URL = '/api/users/register';
-
-
-
-const Register = ({ setUser }) => {
+const Register = () => {
   
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
@@ -20,10 +15,6 @@ const Register = ({ setUser }) => {
   const [confirmPass, setConfirmPass] = useState('');
 
   const navigate = useNavigate();
-
-  const initUser = async(userData) => {
-    
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,28 +32,13 @@ const Register = ({ setUser }) => {
         password: userPassword,
       }
 
-      
-
       /**
        * Post user data here
        * fields: name, email, password, contributer
-       */
-
-      try {
-        const res = await axios.post(API_URL, userData);
-        if (res) {
-          localStorage.setItem('user', JSON.stringify(res.data));
-          setUser(res.data);
-          navigate('/dashboard');
-        }
-      } catch (err) {
-        console.log(err)
-      }
+      */
      
       console.log(userData);
     }
-
-
   }
 
   return (

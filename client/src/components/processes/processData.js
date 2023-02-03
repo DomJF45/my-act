@@ -5,7 +5,6 @@ import { FaRegHandshake } from 'react-icons/fa';
 import { MdSelfImprovement } from 'react-icons/md';
 import { RiTreasureMapLine } from 'react-icons/ri';
 import { FaRegSmile } from 'react-icons/fa';
-import useScreenSize from '../util/hooks/useScreenSize';
 
 const bigSize = 100;
 const smallSize = 80;

@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 import useScreenSize from '../util/hooks/useScreenSize';
-import useColorTheme from '../util/hooks/uesColorTheme';
 
 const Process = ({ process, index }) => {
 
@@ -10,20 +9,9 @@ const Process = ({ process, index }) => {
 
   const window = useScreenSize();
   const navigate = useNavigate();
-  const textColorTheme = useColorTheme();
   
   return (
     <a className='card-box' onClick={() => navigate(process.link)} key={index}>
-      
-      {/* <div
-        style={{
-          position: 'absolute',
-          bottom: '15px',
-          right: '15px'
-        }}
-      >
-        { window.width > 1030 ? process.processImg : process.processImgSmall }
-      </div> */}
       <div
         style={{
           display: 'flex',

@@ -1,5 +1,5 @@
-import React from 'react'
-import YoutubeEmbed from '../../util/video/YoutubeEmbed'
+import React from 'react';
+import YoutubeEmbed from '../../util/video/YoutubeEmbed';
 import GoToExercise from '../../util/directory/GoToExercise';
 import GoBack from '../../util/directory/GoBack';
 

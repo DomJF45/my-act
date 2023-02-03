@@ -16,8 +16,6 @@ const Card = ({ cardData, isOneCard, oneCardData, setOneCardData }) => {
     e.dataTransfer.clear();
   }
 
-  console.log(cardData)
-
   return (
     <div 
       className="values-card"

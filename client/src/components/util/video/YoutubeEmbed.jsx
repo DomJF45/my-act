@@ -1,5 +1,5 @@
-import React from 'react'
-import './Embed.css'
+import React from 'react';
+import './Embed.css';
 
 const YoutubeEmbed = ({ embedId }) => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react'
 
 const useEllipses = ( string, maxNum ) => {
   let stringArr = string.split('');
@@ -16,4 +15,4 @@ const useEllipses = ( string, maxNum ) => {
 
 }
 
-export default useEllipses
+export default useEllipses;

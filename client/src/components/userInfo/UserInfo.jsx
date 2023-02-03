@@ -1,6 +1,6 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
-import GoBack from '../util/directory/GoBack'
+import React from 'react';
+import { Container } from 'react-bootstrap';
+import GoBack from '../util/directory/GoBack';
 
 const UserInfo = () => {
   return (

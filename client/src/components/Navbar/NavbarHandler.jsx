@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react';
 import useScreenSize from '../util/hooks/useScreenSize';
 import MobileNav from './MobileNav';
 import TopContainer from './TopContainer';

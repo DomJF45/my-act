@@ -1,23 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import useColorTheme from '../util/hooks/uesColorTheme';
-import Entries from './Entries';
-import { journalData } from './journalData';
 import { IconContext } from 'react-icons/lib';
-import { GrAdd } from 'react-icons/gr';
 import { IoAddOutline } from 'react-icons/io5';
-import { Button } from 'react-bootstrap';
+import Entries from './Entries';
 import Modal from './modal/Modal';
-import '../../styles/Journal.css';
 import JournalFilter from './filter/JournalFilter';
+import '../../styles/Journal.css';
 
 const JournalPage = () => {
 
   const { mode } = useSelector((state) => state.theme);
   const { posts } = useSelector((state) => state.journal);
-  let journalData = posts;
   const [modalShow, setModalShow] = useState(false);
   const [filter, setFilter] = useState('all');
+  let journalData = posts;
 
   return (
     <>
@@ -34,7 +30,6 @@ const JournalPage = () => {
         >
           <div style={{display: 'flex', height: '100%', alignItems: 'center'}}>
             <h1 style={{color: mode === 'dark' ? 'rgba(255,255,255, .87)' : '#9747FF'}}>Your Journal</h1>
-            {/* add filter component here */}
             <JournalFilter filter={filter} setFilter={setFilter} />
           </div>
           <div id='add-icon' onClick={() => setModalShow(true)}>

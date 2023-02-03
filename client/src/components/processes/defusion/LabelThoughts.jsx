@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import { Form, Card, Button, FormControl } from 'react-bootstrap'
+import React, { useState, useEffect } from 'react';
+import { Form, Card, Button } from 'react-bootstrap';
 import Done from '../../util/directory/Done';
-import axios from 'axios';
-
-const API_URL = '/api/test'
-const userIdTest = '12345'
 
 const LabelThoughts = () => {
-
-
 
   const [finished, setFinished] = useState(false);
   const [form, newForm] = useState([
@@ -28,13 +22,8 @@ const LabelThoughts = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
     // handle post request here
-    try {
-      const res = await axios.post(API_URL, form);
-      console.log(res.data);
-    } catch(err) {
-      console.log(err);
-    }
     
     console.log(form);
     setFinished(true);
@@ -42,15 +31,7 @@ const LabelThoughts = () => {
 
   // make GET req here
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const res = await axios.get(API_URL);
-        return res.data;
-      } catch(err) {
-        console.log(err)
-      }
-    }
-
+    
     // setState(getData) to save the data
   })
 

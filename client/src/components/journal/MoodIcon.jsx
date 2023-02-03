@@ -4,7 +4,6 @@ import {
   TbMoodSmile,
   TbMoodNeutral,
   TbMoodSad,
-  TbMoodNervous,
   TbMoodCry,
 } from 'react-icons/tb';
 import { AiFillQuestionCircle } from 'react-icons/ai';

@@ -1,4 +1,3 @@
-import React from 'react'
 
 const useDate = () => {
   const today = new Date();
@@ -14,4 +13,4 @@ const useDate = () => {
   return formattedToday;
 }
 
-export default useDate
+export default useDate;

@@ -1,9 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react';
 import '../../../styles/processes/Commitment.css';
-import { Form, Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import GoToExercise from '../../util/directory/GoToExercise';
-import Next from '../../util/directory/Next';
 import FormPage from './FormPage';
 import Done from '../../util/directory/Done';
 import axios from 'axios';

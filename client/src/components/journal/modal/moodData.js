@@ -4,9 +4,8 @@ import {
   TbMoodSmile,
   TbMoodNeutral,
   TbMoodSad,
-  TbMoodNervous,
   TbMoodCry,
-} from 'react-icons/tb'
+} from 'react-icons/tb';
 
 const bigSize = 60;
 
