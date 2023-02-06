@@ -1,8 +1,6 @@
 .card-box {
-  /* padding: 2.4rem 1.6rem, 3rem; */
   border-radius: 5px;
   box-shadow: 0 20px 40px -16px rgb(0 0 0 / 40%);
-  /* background: linear-gradient(-5deg,#479aa5,#5473cb 60%,#3e509d); */
   justify-content: space-evenly;
   height: 400px;
   position: relative;
